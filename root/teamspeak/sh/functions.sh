@@ -60,7 +60,14 @@ create_minimal_runscript(){
     echo '#!/bin/sh
 
 cd $(dirname $([ -x "$(command -v realpath)" ] && realpath "$0" || readlink -f "$0"))
-exec qemu-i386 ./ts3server > /dev/null 2>&1 ' > /teamspeak/ts3server_minimal_runscript.sh
+if [ -e "/teamspeak/init" ]
+then
+    rm -R /teamspeak/logs
+    rm -R /teamspeak/save/logs
+    exec qemu-i386 ./ts3server
+else
+    exec qemu-i386 ./ts3server > /dev/null 2>&1 
+fi' > /teamspeak/ts3server_minimal_runscript.sh
 
     chmod +x /teamspeak/ts3server_minimal_runscript.sh
 }
