@@ -1,0 +1,3 @@
+#!/usr/bin/with-contenv sh
+sleep 10s
+exec s6-setuidgid ts /teamspeak/sh/helper.sh
