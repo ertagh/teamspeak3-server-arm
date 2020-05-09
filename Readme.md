@@ -17,6 +17,7 @@ docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/u
 ```
 
 #### Have patience after you started the container. It will take some time and your CPU load will be pretty high during initialization. 
+#### If the container is ran for the first time, it'll shut down after finishing initialization!
 
 ## Additional information:
 
@@ -24,7 +25,7 @@ docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/u
 |------------------|---------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DIST_UPDATE      | 0       | 0,1       | If set to 1, the system will apt update and upgrade on every restart                                                                                                                          |
 | ONLY_LOG_FILES   | 0       | 0,1       | If set to 1, everything TeamSpeak related is only shown in the log files                                                                                                                      |
-| INTERVAL         | 600     | Int       | Interval in seconds for entrypoint to check if server is still running and, if ONLY_LOG_FILES is set to 0, to check if there are new log entries. WARNING: low values will increase CPU load! |
+| INTERVAL         | 600     | Int       | Interval in seconds to check, if ONLY_LOG_FILES is set to 0, if there are new log entries. WARNING: low values will increase CPU load! |
 | TS_UPDATE        | 0       | 0,1       | If set to 1, an updater, which runs on every start of the container, checks & updates the server to the newest version if necessary.                                                          |
 | TS_UPDATE_BACKUP | 1       | 0,1       | If set to 1, the updater will make an backup of the current server before updating to a newer version.                                                                                        |
 | UID              | 1000    |           | Set a custom UID (user)                                                                                                                                                                       |
@@ -65,4 +66,7 @@ So, if you are using an older version of this container, you may want to check t
 </br>
 
 #### Changelog
-[2020-05-09]: Switched over to S6 & renamed the images
+[2020-05-09]: 
+- Bug fixed: Server didn't show Server Query login credentials -> Server now enters new initialization process, if there is no database available
+- Switched over to S6 (INTERVAL no longer needs to check, if the server is running)
+- Images were renamed
