@@ -4,15 +4,34 @@ get_oldest_log(){
         echo "${OLDEST_LOG}"
 }
 
-#Wait a few seconds
-sleep 30s
-
 old_log=""
 
 #Get, how many cycles we need, til 1 week is over
 interval_check_update=$(( 604800 / INTERVAL )) 
 #Counter for the cycles
 counter_check_update=0
+
+#Let the server run until everything necessary has been generated
+if [ -e "/teamspeak/init" ]
+then
+        while :
+        do
+                if [ -d "/teamspeak/logs" ]
+                then
+                        STOP=$(find /teamspeak/logs/ -name "*1.log" | head -n 1)
+                        if [ -n "$STOP" ]
+                        then
+                                ps -ef | grep "qemu-i386 ./ts3server" | grep -v grep | awk '{print $2}' | xargs kill
+                                exit
+                        fi
+                fi
+                sleep 2s    
+        done
+fi
+
+#Wait a few seconds
+sleep 30s
+
 
 while :
 do
