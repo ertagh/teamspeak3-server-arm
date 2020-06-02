@@ -44,7 +44,7 @@ WORKDIR /teamspeak
 #Set the timezone
 #Certificates
 COPY root/ /
-RUN chmod +x /teamspeak/sh/check_update.sh /teamspeak/sh/functions.sh /teamspeak/sh/recovery.sh /teamspeak/sh/update.sh /teamspeak/recover.sh /teamspeak/sh/startup.sh && \
+RUN chmod +x /teamspeak/sh/check_update.sh /teamspeak/sh/functions.sh /teamspeak/sh/recovery.sh /teamspeak/sh/update.sh /teamspeak/recover.sh /teamspeak/sh/startup.sh /teamspeak/sh/helper.sh && \
     chmod 644 /lib/ld-linux.so.2 && \
     chmod -R 644 /lib/i386-linux-gnu && \
     chmod 755 /lib/i386-linux-gnu && \

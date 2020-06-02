@@ -66,7 +66,10 @@ So, if you are using an older version of this container, you may want to check t
 </br>
 
 #### Changelog
+[2020-06-02]:
+- Reworked the bug fix from 2020-05-09 for a more permanent solution
+- Connectivity check now pings teamspeak.com instead of google.com
 [2020-05-09]: 
-- Bug fixed: Server didn't show Server Query login credentials -> Server now enters new initialization process, if there is no database available
-- Switched over to S6 (INTERVAL no longer needs to check, if the server is running)
-- Images were renamed
+- Bug fixed: Server didn't show Server Query login credentials -> Server now enters new initialization process if there is no database available
+- Switched over to S6 (INTERVAL no longer needs to check if the server is running)
+- Images were renameded

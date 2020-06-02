@@ -1,6 +1,7 @@
-#!/bin/sh
-if [ -e "/teamspeak/init" ]
+#!/usr/bin/with-contenv sh
+if [ -e /teamspeak/init ]
 then
   rm -R /teamspeak/init
+else
+  s6-svscanctl -t /var/run/s6/services
 fi
-s6-svscanctl -t /var/run/s6/services

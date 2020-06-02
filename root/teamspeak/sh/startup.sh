@@ -9,6 +9,14 @@ if ! id -u ts >/dev/null 2>&1; then
         useradd -u $UID -g $GID -d /teamspeak ts
 fi
 
+#If there is no database -> enter init
+if ! [ -e "/teamspeak/save/ts3server.sqlitedb" ]
+then
+        touch /teamspeak/init
+        chown $UID:$GID /teamspeak/init
+        chmod 777 /teamspeak/init
+fi
+
 #Get current timezone
 CURRENT_TIME_ZONE="$(cat /etc/timezone)"
 

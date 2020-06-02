@@ -4,6 +4,8 @@ get_oldest_log(){
         echo "${OLDEST_LOG}"
 }
 
+
+
 old_log=""
 
 #Get, how many cycles we need, til 1 week is over
@@ -14,6 +16,9 @@ counter_check_update=0
 #Let the server run until everything necessary has been generated
 if [ -e "/teamspeak/init" ]
 then
+        rm -R /teamspeak/logs/* > /dev/null 2>&1
+        rm -R /teamspeak/save/logs/* > /dev/null 2>&1
+
         while :
         do
                 if [ -d "/teamspeak/logs" ]
@@ -32,14 +37,13 @@ fi
 #Wait a few seconds
 sleep 30s
 
-
 while :
 do
         if [ "$ONLY_LOG_FILES" != 1 ]
         then
                 working_log=$(get_oldest_log)
 
-                while [ -n "$working_log" ]
+                while [ ! -n "$working_log" ]
                 do
                         cat /teamspeak/logs/"$working_log"
                         mv /teamspeak/logs/"$working_log" /teamspeak/save/logs/"$working_log"
