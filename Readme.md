@@ -17,7 +17,6 @@ docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/u
 ```
 
 #### Have patience after you started the container. It will take some time and your CPU load will be pretty high during initialization. 
-#### If the container is ran for the first time, it'll shut down after finishing initialization!
 
 ## Additional information:
 
