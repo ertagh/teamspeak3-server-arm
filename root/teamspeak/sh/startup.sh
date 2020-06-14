@@ -1,4 +1,6 @@
 #!/bin/sh
+. /teamspeak/sh/functions.sh
+
 chown_save(){
         chown -R ts:ts /teamspeak
         chown -R ts:ts /teamspeak_cached
@@ -33,6 +35,33 @@ if [ "$DIST_UPDATE" != 0 ]
 then
     apt-get update
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
+fi
+
+#Check if image contains predownloaded server
+if [ -e "/teamspeak/predownloaded" ]
+then
+        rm -r /teamspeak/predownloaded
+
+        #Complete the installation of the server (similar to last part of "update.sh")
+        echo "Completing the installation of the predownloaded server"
+        clean_cached_folder
+        
+        create_folders
+
+        if [ "$ONLY_LOG_FILES" = 1 ]
+        then
+                ln -s /teamspeak/save/logs /teamspeak/logs
+        else
+                mkdir /teamspeak/logs
+        fi
+
+        ln -s /teamspeak/save/files /teamspeak/files
+
+        create_files
+        create_links
+
+        create_minimal_runscript
+        chown_teamspeak_folder
 fi
 
 #Run the updater, if env is set OR file exists OR teamspeak is not installed 

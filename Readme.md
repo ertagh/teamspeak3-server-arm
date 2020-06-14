@@ -7,16 +7,34 @@ Tested on an RPi3b+ running Raspbian<br/>
 And RPi3b+ running Ubuntu 20.04 (aarch64)
 
 
+## Which tag should I use?
 
-## Run example:
+If you've got a fast connection to "teamspeak.com" -> Use the :latest tag</br>
+Otherwise -> Use the :latest-predownloaded tag
 
+The only difference between them is that the :latest-predownloaded tag comes with a TeamSpeak 3 server already downloaded, while the :latest tag will download the latest version during setup.
+
+## :latest
+### Run example:
 Use something like this and replace {path} and timezone to your liking:
 
 ```shell
-docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:latest
+docker run -d --name TeamSpeak3_Server -e TS_UPDATE=1 -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:latest
 ```
-
 #### Have patience after you started the container. It will take some time and your CPU load will be pretty high during initialization. 
+
+## :latest-predownloaded
+### Run example:
+Use something like this and replace {path} and timezone to your liking:
+
+```shell
+docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:latest-predownloaded
+```
+#### Have patience after you started the container. It will take some time and your CPU load will be pretty high during initialization. 
+
+#### Note:</br>
+With :latest-predownloaded you can update the server either by using the integrated updater OR you can simply pull the latest :latest-predownloaded image and redeploy your container.
+
 
 ## Additional information:
 
@@ -44,13 +62,6 @@ Once every week the container will check if the installed version is still the n
 If you made an update, but the new version doesn't work or you just want to go back to the old one, just put an empty file called "recover" inside the "save"-folder and restart the container.</br>
 You can run the "recover.sh" inside the container as well, it'll do the same.
 
-### Update from older container:
-
-With the new version, many has changed within the container.
-So, if you are using an older version of this container, you may want to check the following points:
-- logs folder is now within the saved folder: you don't need the seperate folder for the logs outside of the saved folder
-- additional environment variables: check the table above
-- entrypoint.sh has been heavily revised
 
 </br>
 </br>
@@ -65,6 +76,10 @@ So, if you are using an older version of this container, you may want to check t
 </br>
 
 #### Changelog
+[2020-06-14]:
+- Reworked the run script. Now you should see the actual cause why your container didn't start more easily.
+- Added :latest-predownload tag
+
 [2020-06-02]:
 - Reworked the bug fix from 2020-05-09 for a more permanent solution
 - Connectivity check now pings teamspeak.com instead of google.com

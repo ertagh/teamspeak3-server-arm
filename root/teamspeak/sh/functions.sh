@@ -74,3 +74,51 @@ exec qemu-i386 ./ts3server > /dev/null 2>&1' > /teamspeak/ts3server_minimal_runs
 chown_teamspeak_folder(){
     chown ts:ts -R /teamspeak
 }
+
+#Creates folders at first run
+create_folders(){
+    if ! [ -d "/teamspeak/save" ]
+    then
+        mkdir /teamspeak/save
+    fi
+
+    if ! [ -d "/teamspeak/save/files" ]
+    then
+        mkdir /teamspeak/save/files
+    fi
+
+    if ! [ -d "/teamspeak/save/logs" ]
+    then
+        mkdir /teamspeak/save/logs
+    fi
+
+    if ! [ -d "/teamspeak/save/backup" ]
+    then
+        mkdir /teamspeak/save/backup
+    fi
+}
+
+#Creates files at first run
+create_files(){
+    if ! [ -e "/teamspeak/save/query_ip_whitelist.txt" ]
+    then
+        touch /teamspeak/save/query_ip_whitelist.txt
+    fi
+
+    if ! [ -e "/teamspeak/save/query_ip_blacklist.txt" ]
+    then
+        touch /teamspeak/save/query_ip_blacklist.txt
+    fi
+
+    if ! [ -e "/teamspeak/save/ts3server.sqlitedb" ]
+    then
+        touch /teamspeak/save/ts3server.sqlitedb
+    fi
+}
+
+#Creates links betwwen save folder and main teamspeak folder
+create_links(){
+    ln -s /teamspeak/save/ts3server.sqlitedb /teamspeak/ts3server.sqlitedb
+    ln -s /teamspeak/save/query_ip_whitelist.txt /teamspeak/query_ip_whitelist.txt
+    ln -s /teamspeak/save/query_ip_blacklist.txt /teamspeak/query_ip_blacklist.txt
+}

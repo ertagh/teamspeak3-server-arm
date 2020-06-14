@@ -1,11 +1,14 @@
 #!/usr/bin/with-contenv sh
 sh /teamspeak/sh/startup.sh
 
-if [ -e /teamspeak/init ]
+if [ -e /teamspeak/ts3server_minimal_runscript.sh ]
 then
-    s6-echo "Initializing TeamSpeak 3 Server.."
+    if [ -e /teamspeak/init ]
+    then
+        s6-echo "Initializing TeamSpeak 3 Server.."
+        exec s6-setuidgid ts /teamspeak/ts3server_minimal_runscript.sh
+    fi
+
+    s6-echo "Starting TeamSpeak 3 Server.."
     exec s6-setuidgid ts /teamspeak/ts3server_minimal_runscript.sh
 fi
-
-s6-echo "Starting TeamSpeak 3 Server.."
-exec s6-setuidgid ts /teamspeak/ts3server_minimal_runscript.sh
