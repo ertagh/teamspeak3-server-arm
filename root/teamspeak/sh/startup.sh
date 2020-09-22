@@ -19,6 +19,18 @@ then
         chmod 777 /teamspeak/init
 fi
 
+#If there is no ini file -> enter init
+if [ "$INIFILE" != 0 ]
+then
+        if ! [ -e "/teamspeak/save/ts3server.ini" ]
+        then
+                touch /teamspeak/init
+                chown $UID:$GID /teamspeak/init
+                chmod 777 /teamspeak/init
+        fi
+fi
+
+
 #Get current timezone
 CURRENT_TIME_ZONE="$(cat /etc/timezone)"
 

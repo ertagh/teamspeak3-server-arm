@@ -26,7 +26,12 @@ then
                         STOP=$(find /teamspeak/logs/ -name "*1.log" | head -n 1)
                         if [ -n "$STOP" ]
                         then
-                                ps -ef | grep "qemu-i386 ./ts3server" | grep -v grep | awk '{print $2}' | xargs kill
+                                if [ "$INIFILE" != 0 ]
+                                then
+                                        ps -ef | grep "qemu-i386 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill -SIGTERM
+                                else
+                                        ps -ef | grep "qemu-i386 ./ts3server" | grep -v grep | awk '{print $2}' | xargs kill -SIGTERM
+                                fi
                                 exit
                         fi
                 fi
