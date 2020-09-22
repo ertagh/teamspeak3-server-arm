@@ -1,3 +1,6 @@
 #!/usr/bin/with-contenv sh
-sleep 10s
+while ! id -u ts >/dev/null 2>&1; do
+        sleep 1s
+done
+
 exec s6-setuidgid ts /teamspeak/sh/helper.sh

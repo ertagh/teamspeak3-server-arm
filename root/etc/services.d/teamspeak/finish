@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv sh
-if [ -e /teamspeak/init ]
+if [ -e "/teamspeak/ts3server.ini" ]
 then
-  rm -R /teamspeak/init
+  mv /teamspeak/ts3server.ini /teamspeak/save/ts3server.ini
 else
   s6-svscanctl -t /var/run/s6/services
 fi

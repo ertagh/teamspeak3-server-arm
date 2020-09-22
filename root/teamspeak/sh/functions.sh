@@ -16,6 +16,11 @@ clean_teamspeak_folder(){
         rm -r /teamspeak/libts3db_sqlite3.so
     fi
 
+    if [ -e "/teamspeak/libts3db_mariadb.sh" ]
+    then
+        rm -r /teamspeak/libts3db_mariadb.sh
+    fi
+
     if [ -e "/teamspeak/libts3_ssh.so" ]
     then
         rm -r /teamspeak/libts3_ssh.so
@@ -60,12 +65,18 @@ create_minimal_runscript(){
     echo '#!/bin/sh
 
 cd $(dirname $([ -x "$(command -v realpath)" ] && realpath "$0" || readlink -f "$0"))
-if [ -e "/teamspeak/init" ]
-then
-    exec qemu-i386 ./ts3server
-fi
-exec qemu-i386 ./ts3server > /dev/null 2>&1' > /teamspeak/ts3server_minimal_runscript.sh
 
+if [ "$INIFILE" != 0 ]
+then
+    if ! [ -e "/teamspeak/save/ts3server.ini" ]
+    then
+        exec /box86/box86 ./ts3server createinifile=1
+    fi
+
+    exec /box86/box86 ./ts3server inifile=save/ts3server.ini
+else
+    exec /box86/box86 ./ts3server $@
+fi' > /teamspeak/ts3server_minimal_runscript.sh
 
     chmod +x /teamspeak/ts3server_minimal_runscript.sh
 }

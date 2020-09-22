@@ -7,7 +7,7 @@ echo "-----------------------------------------------------------------------"
 
 #Creates a backup of the teamspeak folder
 create_backup(){
-    echo "Creating backup!"
+    echo "Creating backup .."
 
     if [ -e "/teamspeak/save/backup/backup.tar.bz2" ]
     then
@@ -52,6 +52,7 @@ new_checksum=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.l
 new_link=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.linux.x86.mirrors."teamspeak.com"')
 
 
+#Same version -> no update
 if [ "$new_version" = "$version" ]
 then
     echo "Current version ($version) is up to date!"
@@ -72,9 +73,10 @@ fi
 
 echo "Update available! $version -> $new_version"
 
-echo "Downloading new version: $new_version"
+echo "Downloading new version ($new_version) .."
 clean_cached_folder
-#Download new version an generate checksum
+
+#Download new version and generate checksum
 wget -O /teamspeak_cached/ts.tar.bz2 "$new_link" > /dev/null 2>&1
 checksum_calculated=$(shasum -a256 /teamspeak_cached/ts.tar.bz2 | awk '{print $1}')
 
@@ -106,17 +108,17 @@ then
     create_backup
 fi
 
-echo "Installing new version $new_version!"
+echo "Installing new version $new_version .."
 
 #Untar new version
 tar xf /teamspeak_cached/ts.tar.bz2 --strip-components=1 -C /teamspeak_cached
-rm /teamspeak_cached/ts.tar.bz2 /teamspeak_cached/ts3server_minimal_runscript.sh /teamspeak_cached/LICENSE /teamspeak_cached/CHANGELOG /teamspeak_cached/libts3db_mariadb.so
+rm /teamspeak_cached/ts.tar.bz2 /teamspeak_cached/ts3server_minimal_runscript.sh /teamspeak_cached/LICENSE /teamspeak_cached/CHANGELOG
 rm -r /teamspeak_cached/doc /teamspeak_cached/redist /teamspeak_cached/serverquerydocs
 
 clean_teamspeak_folder
 
 #If blocked file exists, delete it
-if [ -e /teamspeak/blocked ]
+if [ -e "/teamspeak/blocked" ]
 then
     rm -r /teamspeak/blocked
 fi
@@ -130,13 +132,7 @@ if [ "$version" = "0" ]
 then
     create_folders
 
-    if [ "$ONLY_LOG_FILES" = 1 ]
-    then
-        ln -s /teamspeak/save/logs /teamspeak/logs
-    else
-        mkdir /teamspeak/logs
-    fi
-
+    ln -s /teamspeak/save/logs /teamspeak/logs
     ln -s /teamspeak/save/files /teamspeak/files
 
     create_files
@@ -147,4 +143,4 @@ create_minimal_runscript
 create_version_file $new_version
 chown_teamspeak_folder
 
-echo "Version $new_version installed succesfully!"
+echo "New version ($new_version) installed succesfully!"

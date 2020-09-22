@@ -4,19 +4,13 @@
 chown_save(){
         chown -R ts:ts /teamspeak
         chown -R ts:ts /teamspeak_cached
+        chown -R ts:ts /box86
 }
 
+#Add the user and group
 if ! id -u ts >/dev/null 2>&1; then
         groupadd -g $GID ts
         useradd -u $UID -g $GID -d /teamspeak ts
-fi
-
-#If there is no database -> enter init
-if ! [ -e "/teamspeak/save/ts3server.sqlitedb" ]
-then
-        touch /teamspeak/init
-        chown $UID:$GID /teamspeak/init
-        chmod 777 /teamspeak/init
 fi
 
 #Get current timezone
@@ -25,7 +19,7 @@ CURRENT_TIME_ZONE="$(cat /etc/timezone)"
 #Update timezone if necessary
 if [ $TIME_ZONE != $CURRENT_TIME_ZONE ]
 then
-    echo "Updating timezone to $TIME_ZONE"
+    echo "Updating timezone to $TIME_ZONE .."
     ln -fs /usr/share/zoneinfo/$TIME_ZONE /etc/localtime
     dpkg-reconfigure -f noninteractive tzdata
 fi
@@ -43,18 +37,12 @@ then
         rm -r /teamspeak/predownloaded
 
         #Complete the installation of the server (similar to last part of "update.sh")
-        echo "Completing the installation of the predownloaded server"
+        echo "Finishing the installation of the predownloaded server .."
         clean_cached_folder
         
         create_folders
 
-        if [ "$ONLY_LOG_FILES" = 1 ]
-        then
-                ln -s /teamspeak/save/logs /teamspeak/logs
-        else
-                mkdir /teamspeak/logs
-        fi
-
+        ln -s /teamspeak/save/logs /teamspeak/logs
         ln -s /teamspeak/save/files /teamspeak/files
 
         create_files
@@ -85,5 +73,5 @@ fi
 #Just for safety, just wait a few seconds
 sleep 10s
 
-#Let's chown everything we need..
+#Let us chown everything we need..
 chown_save
