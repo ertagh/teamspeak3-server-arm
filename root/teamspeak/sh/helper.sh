@@ -6,14 +6,26 @@ then
     #No ini file is present
     if ! [ -e "/teamspeak/save/ts3server.ini" ]
     then
+        current_timestamp=$(date "+%s")
         while :
         do
                 #ini file has been generated
                 if [ -e "/teamspeak/ts3server.ini" ]
                 then
-                        #kill the process
-                        ps -ef | grep "/box86/box86 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill -SIGTERM
-                        exit
+                        STOP=$(find /teamspeak/save/logs -type f -name "*1.log" -exec stat -c '%z' {} + | head -n1)
+                        if [ -n "$STOP" ]
+                        then
+                                #Get the creation date of the last log file from the virtual server
+                                timestamp_file=$(date -d "$STOP" "+%s")
+
+                                if [ $timestamp_file -gt $current_timestamp ]
+                                then
+                                        #kill the process
+                                        ps -ef | grep "/box86/box86 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
+                                        sleep 20s
+                                        exit
+                                fi
+                        fi
                 fi
                 sleep 1s
         done
