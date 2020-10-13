@@ -1,4 +1,5 @@
 #!/bin/sh
+#Check internet connectivity
 if !(ping -q -c 1 -W 1 teamspeak.com > /dev/null)
 then
     echo "Internet connectivity check failed!"
@@ -7,16 +8,30 @@ fi
 
 version=0
 
-#Get current installed version
+#Get current version
 if [ -e "/teamspeak/version" ]
 then
     version=$(cat /teamspeak/version)
 fi
 
-#Get new version info from json file
+#Getting new information from json file
 new_version=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.linux.x86.version')
 
-if [ "$version" != "$new_verion" ] && [ "$version" != "0" ]
+
+if [ "$new_version" = "$version" ]
 then
-    echo $(date +%m-%d-%Y)": Update available! $version -> $new_version"
+    return
 fi
+
+#If you entered recovery mode, the 'broken' version got blocked
+if [ -e "/teamspeak/blocked" ]
+then
+    blocked=$(cat /teamspeak/blocked)
+
+    if [ "$new_version" = "$blocked" ]
+    then
+        return
+    fi
+fi
+
+echo $(date +%m-%d-%Y)": Update available! $version -> $new_version"

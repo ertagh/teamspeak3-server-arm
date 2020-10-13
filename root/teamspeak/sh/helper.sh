@@ -28,9 +28,9 @@ then
                         then
                                 if [ "$INIFILE" != 0 ]
                                 then
-                                        ps -ef | grep "qemu-i386 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill -SIGTERM
+                                        ps -ef | grep "qemu-i386 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
                                 else
-                                        ps -ef | grep "qemu-i386 ./ts3server" | grep -v grep | awk '{print $2}' | xargs kill -SIGTERM
+                                        ps -ef | grep "qemu-i386 ./ts3server" | grep -v grep | awk '{print $2}' | xargs kill
                                 fi
                                 exit
                         fi

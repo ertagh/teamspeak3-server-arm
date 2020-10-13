@@ -80,6 +80,9 @@ You can run the "recover.sh" inside the container as well, it'll do the same.
 </br>
 
 #### Changelog
+[2020-10-13]:
+- Updated the weekly version check
+
 [2020-09-22]:
 - Added arm32v7-image based on Box86
 - Updated S6 to a newer version
