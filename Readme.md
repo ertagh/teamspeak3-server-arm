@@ -80,6 +80,11 @@ You can run the "recover.sh" inside the container as well, it'll do the same.
 </br>
 
 #### Changelog
+[2021-01-01]:
+- Updated S6 to 2.1.0.2
+- Updated predownload images to TeamSpeak 3.13.3
+- Fixed "ONLY_LOG_FILES=0" bug inside helper.sh
+
 [2020-10-13]:
 - Updated the weekly version check
 

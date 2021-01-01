@@ -48,10 +48,10 @@ do
         then
                 working_log=$(get_oldest_log)
 
-                while [ ! -n "$working_log" ]
+                while [ -n "$working_log" ]
                 do
                         cat /teamspeak/logs/"$working_log"
-                        mv /teamspeak/logs/"$working_log" /teamspeak/save/logs/"$working_log"
+                        mv /teamspeak/logs/"$working_log" /teamspeak/save/logs/
 
                         working_log=$(get_oldest_log)
                 done

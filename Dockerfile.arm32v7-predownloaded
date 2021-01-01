@@ -16,7 +16,7 @@ ENV TS3SERVER_LICENSE accept
 LABEL Maintainer="ertagh@web.de"
 
 #Add s6
-ADD https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.0/s6-overlay-armhf.tar.gz /tmp/
+ADD https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.2/s6-overlay-armhf.tar.gz /tmp/
 
 #Update repository and install necessary programs
 #Creating folders
