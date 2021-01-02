@@ -5,7 +5,6 @@ get_oldest_log(){
 }
 
 
-
 old_log=""
 
 #Get, how many cycles we need, til 1 week is over
@@ -21,21 +20,28 @@ then
 
         while :
         do
-                if [ -d "/teamspeak/logs" ]
+                if [ -e "/teamspeak/init" ]
                 then
-                        STOP=$(find /teamspeak/logs/ -name "*1.log" | head -n 1)
-                        if [ -n "$STOP" ]
+                        if [ -d "/teamspeak/logs" ]
                         then
-                                if [ "$INIFILE" != 0 ]
+                                STOP=$(find /teamspeak/logs/ -name "*1.log" | head -n 1)
+                                if [ -n "$STOP" ]
                                 then
-                                        ps -ef | grep "qemu-i386 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
-                                else
-                                        ps -ef | grep "qemu-i386 ./ts3server" | grep -v grep | awk '{print $2}' | xargs kill
+                                        echo "Initialization completed!"
+                                        echo "Restart of TeamSpeak 3 Server initiated .."
+                                        if [ "$INIFILE" != 0 ]
+                                        then
+                                                ps -ef | grep "qemu-i386 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
+                                        else
+                                                ps -ef | grep "qemu-i386 ./ts3server" | grep -v grep | awk '{print $2}' | xargs kill
+                                        fi
+                                        exit
                                 fi
-                                exit
                         fi
+                        sleep 2s
+                else
+                        exit
                 fi
-                sleep 2s    
         done
 fi
 

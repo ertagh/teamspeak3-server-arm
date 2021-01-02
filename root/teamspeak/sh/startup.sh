@@ -17,6 +17,9 @@ then
         touch /teamspeak/init
         chown $UID:$GID /teamspeak/init
         chmod 777 /teamspeak/init
+
+        create_folders
+        create_files
 fi
 
 #If there is no ini file -> enter init
@@ -55,7 +58,7 @@ then
         rm -r /teamspeak/predownloaded
 
         #Complete the installation of the server (similar to last part of "update.sh")
-        echo "Completing the installation of the predownloaded server"
+        echo "Completing the installation of the predownloaded server .."
         clean_cached_folder
         
         create_folders
@@ -99,3 +102,9 @@ sleep 10s
 
 #Let's chown everything we need..
 chown_save
+
+#Debug switch
+if [ "$DEBUG" != 0 ]
+then
+        tail -f /dev/null
+fi

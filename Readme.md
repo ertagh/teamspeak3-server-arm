@@ -50,6 +50,7 @@ With :latest-predownloaded you can update the server either by using the integra
 | GID              | 1000    |           | Set a custom GID (group)                                                                                                                                                                      |
 | ONLY_LOG_FILES   | 0       | 0,1       | If set to 1, everything TeamSpeak related is only shown in the log files (Not neccessary for Box86)                                                                                           |
 | INTERVAL         | 600     | Int       | Interval in seconds to check, if ONLY_LOG_FILES is set to 0, if there are new log entries. WARNING: low values will increase CPU load! (Not neccessary for Box86)                             |
+| DEBUG            | 0       | 0,1       | Container will enter debug mode ( -> no server will start, only the helper)                                                                                                                   |
 
 
 ### TS_UPDATE
@@ -80,6 +81,11 @@ You can run the "recover.sh" inside the container as well, it'll do the same.
 </br>
 
 #### Changelog
+[2021-01-02]:
+- Added debug env
+- Optimized Re-init phase
+- Optimized the helper
+
 [2021-01-01]:
 - Updated S6 to 2.1.0.2
 - Updated predownload images to TeamSpeak 3.13.3
