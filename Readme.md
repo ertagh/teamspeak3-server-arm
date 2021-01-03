@@ -1,7 +1,8 @@
-# TeamSpeak for arm (using Box86 or QEMU)
+# TeamSpeak for arm (using QEMU or Box86)
+## BIG UPDATE [2020-01-03]!
 
-Based on arm32v7/debian:stable-slim<br/>
-Or arm64v8/debian:stable-slim
+Based on arm32v7/debian:bullseye-slim<br/>
+Or arm64v8/debian:bullseye-slim
 
 Tested on an RPi3b+ running Raspbian<br/>
 And RPi3b+ running Ubuntu 20.04 (aarch64)
@@ -14,10 +15,7 @@ Otherwise -> Use the :latest-predownloaded tag
 
 The only difference between them is that the :latest-predownloaded tag comes with a TeamSpeak 3 server already downloaded, while the :latest tag will download the latest version during setup.
 
-The arm32v7 images are using Box86 (https://github.com/ptitSeb/box86), while arm64v8 is still using qemu.
-You should ALWAYS prefer the arm32v7 image, because Box86 has some advantages over qemu! Only use the arm64v8 images if absolutely want to use arm64v8 or qemu!
-
-#### Box86 shows some warnings, but it still works. Maybe they will disappear with a newer version. 
+#### The image based on Box86 crashes during file uploads! Please disable file uploads (e.g. don't expose port 30033)!
 
 ## :latest
 ### Run example:
@@ -45,14 +43,14 @@ With :latest-predownloaded you can update the server either by using the integra
 
 | ENV              | default | available |                                                                                                                                                                                               |
 |------------------|---------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| INIFILE          | 0       | 0,1       | If set to 1, the system will generate an ini-file inside the "save"-folder and will use this file at startup                                                                                 |
+| INIFILE          | 0       | 0,1       | If set to 1, the system will generate an ini-file inside the "save"-folder and will use this file at startup                                                                                  |
 | DIST_UPDATE      | 0       | 0,1       | If set to 1, the system will apt update and upgrade on every restart                                                                                                                          |
 | TS_UPDATE        | 0       | 0,1       | If set to 1, an updater, which runs on every start of the container, checks & updates the server to the newest version if necessary.                                                          |
 | TS_UPDATE_BACKUP | 1       | 0,1       | If set to 1, the updater will make an backup of the current server before updating to a newer version.                                                                                        |
 | UID              | 1000    |           | Set a custom UID (user)                                                                                                                                                                       |
 | GID              | 1000    |           | Set a custom GID (group)                                                                                                                                                                      |
-| ONLY_LOG_FILES   | 0       | 0,1       | !ONLY AVAILABLE IN ARM64v8! If set to 1, everything TeamSpeak related is only shown in the log files                                                                                                                      |
-| INTERVAL         | 600     | Int       | !ONLY AVAILABLE IN ARM64v8! Interval in seconds to check, if ONLY_LOG_FILES is set to 0, if there are new log entries. WARNING: low values will increase CPU load!                                                        |
+| DEBUG            | 0       | 0,1       | Container will enter debug mode ( -> no server will start, only the helper)                                                                                                                   |
+| QEMU_OFFSET      | 0x8000  | hex,int   | Specify the offset of qemu (Only use if you're facing an error with the default value. Most likely try 0x10000 instead) Not needed for Box86                                                  |
 
 
 ### TS_UPDATE
@@ -63,11 +61,14 @@ The backup is located in the "backup"-folder within the "save"-folder.
 There will be no versioning inside the backup-script. If you want to keep more than just your previous version, you have to do this by yourself.
 
 ### Update check
-Once every week the container will check if the installed version is still the newest one. If not, there will be a message inside the log.
+Every sunday the container will check if the installed version is still up-to-date. If not, there will be a message inside the log.
 
 ### Recovery
 If you made an update, but the new version doesn't work or you just want to go back to the old one, just put an empty file called "recover" inside the "save"-folder and restart the container.</br>
 You can run the "recover.sh" inside the container as well, it'll do the same.
+
+### Debug
+If you want to enter debug mode you can either set the env for a permanent debug mode, or just create a empty file called "debug" inside the "save"-folder and restart the container.
 
 
 </br>
@@ -83,14 +84,28 @@ You can run the "recover.sh" inside the container as well, it'll do the same.
 </br>
 
 #### Changelog
+[2021-01-03]:
+- Updated from Debian Butcher to Bullseye
+- Therefore updated qemu version
+- Removed ONLY_LOG_FILES & INTERVAL Envs
+- Reworked the whole scripts due to the updates
+- Added QEMU_OFFSET Env
+
+[2021-01-02]:
+- Added debug env
+- Optimized Re-init phase
+- Optimized the helper
+
+[2021-01-01]:
+- Updated S6 to 2.1.0.2
+- Updated predownload images to TeamSpeak 3.13.3
+- Fixed "ONLY_LOG_FILES=0" bug inside helper.sh
+
 [2020-10-13]:
 - Updated the weekly version check
 
-[2020-09-25]:
-- Update for arm32v7(Box86) image: Process was killed to early during creation of ini-file
-
 [2020-09-22]:
-- Switched over to Box86 for the arm32v7 images
+- Added arm32v7-image based on Box86
 - Updated S6 to a newer version
 - Added ini-file support
 
