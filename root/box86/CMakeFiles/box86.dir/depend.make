@@ -7,6 +7,7 @@ CMakeFiles/box86.dir/src/box86context.c.o: ../src/include/callback.h
 CMakeFiles/box86.dir/src/box86context.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/box86context.c.o: ../src/include/dynablock.h
 CMakeFiles/box86.dir/src/box86context.c.o: ../src/include/elfloader.h
+CMakeFiles/box86.dir/src/box86context.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/box86context.c.o: ../src/include/librarian.h
 CMakeFiles/box86.dir/src/box86context.c.o: ../src/include/library.h
 CMakeFiles/box86.dir/src/box86context.c.o: ../src/include/myfts.h
@@ -17,6 +18,7 @@ CMakeFiles/box86.dir/src/box86context.c.o: ../src/include/x86emu.h
 CMakeFiles/box86.dir/src/box86context.c.o: ../src/include/x86trace.h
 CMakeFiles/box86.dir/src/box86context.c.o: ../src/wrapped/generated/wrapper.h
 CMakeFiles/box86.dir/src/box86context.c.o: ../src/box86context.c
+CMakeFiles/box86.dir/src/box86context.c.o: ../src/dynarec/arm_lock_helper.h
 
 CMakeFiles/box86.dir/src/build_info.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/build_info.c.o: ../src/box86version.h
@@ -115,6 +117,7 @@ CMakeFiles/box86.dir/src/emu/x86primop.c.o: ../src/emu/x86run_private.h
 
 CMakeFiles/box86.dir/src/emu/x86run.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/emu/x86run.c.o: ../src/include/box86stack.h
+CMakeFiles/box86.dir/src/emu/x86run.c.o: ../src/include/bridge.h
 CMakeFiles/box86.dir/src/emu/x86run.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/emu/x86run.c.o: ../src/include/my_cpuid.h
 CMakeFiles/box86.dir/src/emu/x86run.c.o: ../src/include/pathcoll.h
@@ -233,6 +236,7 @@ CMakeFiles/box86.dir/src/emu/x87run.c.o: ../src/include/regs.h
 CMakeFiles/box86.dir/src/emu/x87run.c.o: ../src/include/x86emu.h
 CMakeFiles/box86.dir/src/emu/x87run.c.o: ../src/include/x86run.h
 CMakeFiles/box86.dir/src/emu/x87run.c.o: ../src/include/x86trace.h
+CMakeFiles/box86.dir/src/emu/x87run.c.o: ../src/emu/modrm.h
 CMakeFiles/box86.dir/src/emu/x87run.c.o: ../src/emu/x86emu_private.h
 CMakeFiles/box86.dir/src/emu/x87run.c.o: ../src/emu/x86primop.h
 CMakeFiles/box86.dir/src/emu/x87run.c.o: ../src/emu/x86run_private.h
@@ -361,6 +365,7 @@ CMakeFiles/box86.dir/src/libtools/sdl2rwops.c.o: ../src/libtools/sdl2rwops.c
 
 CMakeFiles/box86.dir/src/libtools/signals.c.o: ../src/emu/x86emu_private.h
 CMakeFiles/box86.dir/src/libtools/signals.c.o: ../src/emu/x86run_private.h
+CMakeFiles/box86.dir/src/libtools/signals.c.o: ../src/emu/x87emu_private.h
 CMakeFiles/box86.dir/src/libtools/signals.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/libtools/signals.c.o: ../src/include/box86stack.h
 CMakeFiles/box86.dir/src/libtools/signals.c.o: ../src/include/callback.h
@@ -396,6 +401,13 @@ CMakeFiles/box86.dir/src/libtools/threads.c.o: ../src/include/x86trace.h
 CMakeFiles/box86.dir/src/libtools/threads.c.o: ../src/tools/bridge_private.h
 CMakeFiles/box86.dir/src/libtools/threads.c.o: ../src/libtools/threads.c
 
+CMakeFiles/box86.dir/src/libtools/vkalign.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/libtools/vkalign.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/libtools/vkalign.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/libtools/vkalign.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/libtools/vkalign.c.o: ../src/libtools/vkalign.c
+CMakeFiles/box86.dir/src/libtools/vkalign.c.o: ../src/libtools/vkalign.h
+
 CMakeFiles/box86.dir/src/main.c.o: ../src/include/auxval.h
 CMakeFiles/box86.dir/src/main.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/main.c.o: ../src/include/box86stack.h
@@ -423,8 +435,13 @@ CMakeFiles/box86.dir/src/tools/box86stack.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/tools/box86stack.c.o: ../src/include/regs.h
 CMakeFiles/box86.dir/src/tools/box86stack.c.o: ../src/tools/box86stack.c
 
+CMakeFiles/box86.dir/src/tools/bridge.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/tools/bridge.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/tools/bridge.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/tools/bridge.c.o: ../src/include/dynablock.h
 CMakeFiles/box86.dir/src/tools/bridge.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/tools/bridge.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/tools/bridge.c.o: ../src/include/x86emu.h
 CMakeFiles/box86.dir/src/tools/bridge.c.o: ../src/wrapped/generated/wrapper.h
 CMakeFiles/box86.dir/src/tools/bridge.c.o: ../src/tools/bridge.c
 CMakeFiles/box86.dir/src/tools/bridge.c.o: ../src/tools/bridge_private.h
@@ -435,7 +452,6 @@ CMakeFiles/box86.dir/src/tools/callback.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/tools/callback.c.o: ../src/include/box86stack.h
 CMakeFiles/box86.dir/src/tools/callback.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/tools/callback.c.o: ../src/include/dynarec.h
-CMakeFiles/box86.dir/src/tools/callback.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/tools/callback.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/tools/callback.c.o: ../src/include/regs.h
 CMakeFiles/box86.dir/src/tools/callback.c.o: ../src/include/x86emu.h
@@ -452,6 +468,7 @@ CMakeFiles/box86.dir/src/tools/gtkclass.c.o: ../src/include/bridge.h
 CMakeFiles/box86.dir/src/tools/gtkclass.c.o: ../src/include/callback.h
 CMakeFiles/box86.dir/src/tools/gtkclass.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/tools/gtkclass.c.o: ../src/include/gtkclass.h
+CMakeFiles/box86.dir/src/tools/gtkclass.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/tools/gtkclass.c.o: ../src/include/librarian.h
 CMakeFiles/box86.dir/src/tools/gtkclass.c.o: ../src/include/library.h
 CMakeFiles/box86.dir/src/tools/gtkclass.c.o: ../src/include/pathcoll.h
@@ -469,7 +486,9 @@ CMakeFiles/box86.dir/src/tools/pathcoll.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/tools/pathcoll.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/tools/pathcoll.c.o: ../src/tools/pathcoll.c
 
+CMakeFiles/box86.dir/src/tools/wine_tools.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/tools/wine_tools.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/tools/wine_tools.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/tools/wine_tools.c.o: ../src/include/wine_tools.h
 CMakeFiles/box86.dir/src/tools/wine_tools.c.o: ../src/tools/wine_tools.c
 
@@ -496,6 +515,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.o: ../src/wrapped/wrappedlib_unde
 
 CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o: ../src/include/wrappedlibs.h
@@ -508,6 +528,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o: ../src/wrapped/wrapped
 
 CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o: ../src/include/wrappedlibs.h
@@ -538,6 +559,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedbz2.c.o: ../src/wrapped/wrappedlib_undef
 
 CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o: ../src/include/wrappedlibs.h
@@ -653,6 +675,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenuglib.c.o: ../src/wrapped/wrapped
 
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o: ../src/include/wrappedlibs.h
@@ -698,6 +721,24 @@ CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.o: ../src/wrapped/generated/w
 CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.o: ../src/wrapped/wrappedfreetype.c
 CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.o: ../src/wrapped/wrappedlib_init.h
 CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.o: ../src/wrapped/wrappedlib_undefs.h
+
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/gtkclass.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/librarian.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/wrapped/wrappedgdk3.c
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/wrapped/wrappedlib_undefs.h
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.o: ../src/emu/x86emu_private.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.o: ../src/include/box86context.h
@@ -763,6 +804,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/include/librarian.h
 CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/include/myalign.h
 CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/include/threads.h
 CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/include/wrappedlibs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/include/x86emu.h
 CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/librarian/library_private.h
@@ -773,6 +815,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/wrapped/wrappedlib_und
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o: ../src/include/wrappedlibs.h
@@ -813,13 +856,27 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/include/regs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/include/wrappedlibs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/include/x86emu.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/libtools/vkalign.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/wrapped/generated/wrapper.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/wrapped/wrappedgobject2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/wrapped/wrappedlib_init.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/wrapped/wrappedlib_undefs.h
 
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/wrapped/wrappedgssapikrb5.c
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/wrapped/wrappedlib_undefs.h
+
 CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o: ../src/include/wrappedlibs.h
@@ -832,6 +889,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o: ../src/wrapped/wra
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o: ../src/include/wrappedlibs.h
@@ -861,6 +919,25 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.o: ../src/wrapped/wrappedgthr
 CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.o: ../src/wrapped/wrappedlib_init.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.o: ../src/wrapped/wrappedlib_undefs.h
 
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/gtkclass.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/librarian.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/myalign.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/wrapped/wrappedgtk3.c
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/wrapped/wrappedlib_undefs.h
+
 CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o: ../src/emu/x86emu_private.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o: ../src/include/bridge.h
@@ -882,6 +959,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o: ../src/wrapped/wrappedlib_u
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o: ../src/include/wrappedlibs.h
@@ -903,6 +981,69 @@ CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.o: ../src/wrapped/generated/wrap
 CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.o: ../src/wrapped/wrappediconv.c
 CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.o: ../src/wrapped/wrappedlib_init.h
 CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.o: ../src/wrapped/wrappedlib_undefs.h
+
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/include/librarian.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/wrapped/wrappedkrb5.c
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/wrapped/wrappedlib_undefs.h
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/wrapped/wrappedlber.c
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/wrapped/wrappedlib_undefs.h
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/include/librarian.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/wrapped/wrappedlcms2.c
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/wrapped/wrappedlib_undefs.h
+
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/include/librarian.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/wrapped/wrappedldapr.c
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/wrapped/wrappedlib_undefs.h
 
 CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.o: ../src/emu/x86emu_private.h
 CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.o: ../src/include/box86context.h
@@ -960,6 +1101,24 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o: ../src/wrapped/generated/wrapp
 CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o: ../src/wrapped/wrappedlib_init.h
 CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o: ../src/wrapped/wrappedlib_undefs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o: ../src/wrapped/wrappedlibc.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/librarian.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/myalign.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/wrapped/wrappedlib_undefs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/wrapped/wrappedlibcups.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibdl.c.o: ../src/elfs/elfloader_private.h
 CMakeFiles/box86.dir/src/wrapped/wrappedlibdl.c.o: ../src/emu/x86emu_private.h
@@ -1157,6 +1316,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibncursesw.c.o: ../src/wrapped/wrappedl
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o: ../src/include/wrappedlibs.h
@@ -1834,6 +1994,18 @@ CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o: ../src/wrapped/wrappedlib_in
 CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o: ../src/wrapped/wrappedlib_undefs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o: ../src/wrapped/wrappedmpg123.c
 
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/wrapped/wrappedlib_undefs.h
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/wrapped/wrappednsl.c
+
 CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o: ../src/emu/x86emu_private.h
 CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o: ../src/include/bridge.h
@@ -1852,10 +2024,15 @@ CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o: ../src/wrapped/wrappedlib_in
 CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o: ../src/wrapped/wrappedlib_undefs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o: ../src/wrapped/wrappedopenal.c
 
+CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/emu/x86emu_private.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/include/librarian.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/include/regs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/include/wrappedlibs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/include/x86emu.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/librarian/library_private.h
@@ -1866,6 +2043,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/wrapped/wrappedpango.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o: ../src/include/debug.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o: ../src/include/khash.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o: ../src/include/wrappedlibs.h
@@ -1968,6 +2146,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: ../src/include/librarian.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: ../src/include/regs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: ../src/include/sdl1rwops.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: ../src/include/threads.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: ../src/include/wrappedlibs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: ../src/include/x86emu.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: ../src/include/x86trace.h
@@ -2037,6 +2216,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: ../src/include/myalign.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: ../src/include/pathcoll.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: ../src/include/regs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: ../src/include/sdl2rwops.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: ../src/include/threads.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: ../src/include/wrappedlibs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: ../src/librarian/library_private.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: ../src/wrapped/generated/wrapper.h
@@ -2076,6 +2256,22 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o: ../src/wrapped/generated/
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o: ../src/wrapped/wrappedlib_init.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o: ../src/wrapped/wrappedlib_undefs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o: ../src/wrapped/wrappedsdl2mixer.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/include/sdl2rwops.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/wrapped/wrappedlib_undefs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/wrapped/wrappedsdl2ttf.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.o: ../src/include/bridge.h
@@ -2122,6 +2318,24 @@ CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o: ../src/wrapped/gene
 CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o: ../src/wrapped/wrappedlib_init.h
 CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o: ../src/wrapped/wrappedlib_undefs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o: ../src/wrapped/wrappedtcmallocminimal.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/librarian.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/myalign.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/wrapped/wrappedlib_undefs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/wrapped/wrappedturbojpeg.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.o: ../src/include/bridge.h
@@ -2183,6 +2397,36 @@ CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o: ../src/wrapped/wrappedli
 CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o: ../src/wrapped/wrappedlib_undefs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o: ../src/wrapped/wrappedvorbisfile.c
 
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/include/librarian.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/libtools/vkalign.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/wrapped/wrappedlib_undefs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/wrapped/wrappedvulkan.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/wrapped/wrappedlib_undefs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/wrapped/wrappedwaylandclient.c
+
 CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o: ../src/include/box86context.h
 CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o: ../src/include/bridge.h
 CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o: ../src/include/khash.h
@@ -2194,4 +2438,38 @@ CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o: ../src/wrapped/generated/w
 CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o: ../src/wrapped/wrappedlib_init.h
 CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o: ../src/wrapped/wrappedlib_undefs.h
 CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o: ../src/wrapped/wrappedxinerama.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/include/librarian.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/wrapped/wrappedlib_undefs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/wrapped/wrappedxml2.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/emu/x86emu_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/include/box86context.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/include/bridge.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/include/callback.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/include/debug.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/include/khash.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/include/librarian.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/include/pathcoll.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/include/regs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/include/wrappedlibs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/include/x86emu.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/librarian/library_private.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/wrapped/generated/wrapper.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/wrapped/wrappedlib_init.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/wrapped/wrappedlib_undefs.h
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/wrapped/wrappedxslt.c
 

@@ -31,6 +31,7 @@ CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_00.c.o
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_0f.c.o
  ../src/emu/x86emu_private.h
  ../src/emu/x86run_private.h
+ ../src/emu/x87emu_private.h
  ../src/include/box86context.h
  ../src/include/box86stack.h
  ../src/include/callback.h
@@ -594,6 +595,7 @@ CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_helper.c.o
  ../src/include/x86trace.h
  /box86/src/dynarec/arm_emitter.h
  /box86/src/dynarec/arm_printer.h
+ /box86/src/dynarec/dynablock_private.h
  /box86/src/dynarec/dynarec_arm_functions.h
  /box86/src/dynarec/dynarec_arm_helper.c
  /box86/src/dynarec/dynarec_arm_helper.h

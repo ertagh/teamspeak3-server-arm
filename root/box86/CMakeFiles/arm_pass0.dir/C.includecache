@@ -80,6 +80,8 @@ stdint.h
 
 /box86/src/dynarec/arm_printer.h
 
+/box86/src/dynarec/dynablock_private.h
+
 /box86/src/dynarec/dynarec_arm_00.c
 stdio.h
 -
@@ -90,6 +92,8 @@ stddef.h
 pthread.h
 -
 errno.h
+-
+signal.h
 -
 debug.h
 /box86/src/dynarec/debug.h
@@ -167,6 +171,8 @@ arm_printer.h
 /box86/src/dynarec/arm_printer.h
 my_cpuid.h
 /box86/src/dynarec/my_cpuid.h
+emu/x87emu_private.h
+/box86/src/dynarec/emu/x87emu_private.h
 dynarec_arm_functions.h
 /box86/src/dynarec/dynarec_arm_functions.h
 dynarec_arm_helper.h
@@ -1095,6 +1101,8 @@ dynarec_arm.h
 /box86/src/dynarec/dynarec_arm.h
 dynarec_arm_private.h
 /box86/src/dynarec/dynarec_arm_private.h
+dynablock_private.h
+/box86/src/dynarec/dynablock_private.h
 arm_printer.h
 /box86/src/dynarec/arm_printer.h
 ../tools/bridge_private.h

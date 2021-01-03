@@ -2097,6 +2097,33 @@ src/libtools/threads.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/libtools/threads.c.s
 .PHONY : src/libtools/threads.c.s
 
+src/libtools/vkalign.o: src/libtools/vkalign.c.o
+
+.PHONY : src/libtools/vkalign.o
+
+# target to build an object file
+src/libtools/vkalign.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/libtools/vkalign.c.o
+.PHONY : src/libtools/vkalign.c.o
+
+src/libtools/vkalign.i: src/libtools/vkalign.c.i
+
+.PHONY : src/libtools/vkalign.i
+
+# target to preprocess a source file
+src/libtools/vkalign.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/libtools/vkalign.c.i
+.PHONY : src/libtools/vkalign.c.i
+
+src/libtools/vkalign.s: src/libtools/vkalign.c.s
+
+.PHONY : src/libtools/vkalign.s
+
+# target to generate assembly for a file
+src/libtools/vkalign.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/libtools/vkalign.c.s
+.PHONY : src/libtools/vkalign.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -2745,6 +2772,33 @@ src/wrapped/wrappedfreetype.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.s
 .PHONY : src/wrapped/wrappedfreetype.c.s
 
+src/wrapped/wrappedgdk3.o: src/wrapped/wrappedgdk3.c.o
+
+.PHONY : src/wrapped/wrappedgdk3.o
+
+# target to build an object file
+src/wrapped/wrappedgdk3.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o
+.PHONY : src/wrapped/wrappedgdk3.c.o
+
+src/wrapped/wrappedgdk3.i: src/wrapped/wrappedgdk3.c.i
+
+.PHONY : src/wrapped/wrappedgdk3.i
+
+# target to preprocess a source file
+src/wrapped/wrappedgdk3.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.i
+.PHONY : src/wrapped/wrappedgdk3.c.i
+
+src/wrapped/wrappedgdk3.s: src/wrapped/wrappedgdk3.c.s
+
+.PHONY : src/wrapped/wrappedgdk3.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedgdk3.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.s
+.PHONY : src/wrapped/wrappedgdk3.c.s
+
 src/wrapped/wrappedgdkpixbuf2.o: src/wrapped/wrappedgdkpixbuf2.c.o
 
 .PHONY : src/wrapped/wrappedgdkpixbuf2.o
@@ -2934,6 +2988,33 @@ src/wrapped/wrappedgobject2.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.s
 .PHONY : src/wrapped/wrappedgobject2.c.s
 
+src/wrapped/wrappedgssapikrb5.o: src/wrapped/wrappedgssapikrb5.c.o
+
+.PHONY : src/wrapped/wrappedgssapikrb5.o
+
+# target to build an object file
+src/wrapped/wrappedgssapikrb5.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o
+.PHONY : src/wrapped/wrappedgssapikrb5.c.o
+
+src/wrapped/wrappedgssapikrb5.i: src/wrapped/wrappedgssapikrb5.c.i
+
+.PHONY : src/wrapped/wrappedgssapikrb5.i
+
+# target to preprocess a source file
+src/wrapped/wrappedgssapikrb5.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.i
+.PHONY : src/wrapped/wrappedgssapikrb5.c.i
+
+src/wrapped/wrappedgssapikrb5.s: src/wrapped/wrappedgssapikrb5.c.s
+
+.PHONY : src/wrapped/wrappedgssapikrb5.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedgssapikrb5.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.s
+.PHONY : src/wrapped/wrappedgssapikrb5.c.s
+
 src/wrapped/wrappedgstinterfaces010.o: src/wrapped/wrappedgstinterfaces010.c.o
 
 .PHONY : src/wrapped/wrappedgstinterfaces010.o
@@ -3014,6 +3095,33 @@ src/wrapped/wrappedgthread2.s: src/wrapped/wrappedgthread2.c.s
 src/wrapped/wrappedgthread2.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.s
 .PHONY : src/wrapped/wrappedgthread2.c.s
+
+src/wrapped/wrappedgtk3.o: src/wrapped/wrappedgtk3.c.o
+
+.PHONY : src/wrapped/wrappedgtk3.o
+
+# target to build an object file
+src/wrapped/wrappedgtk3.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o
+.PHONY : src/wrapped/wrappedgtk3.c.o
+
+src/wrapped/wrappedgtk3.i: src/wrapped/wrappedgtk3.c.i
+
+.PHONY : src/wrapped/wrappedgtk3.i
+
+# target to preprocess a source file
+src/wrapped/wrappedgtk3.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.i
+.PHONY : src/wrapped/wrappedgtk3.c.i
+
+src/wrapped/wrappedgtk3.s: src/wrapped/wrappedgtk3.c.s
+
+.PHONY : src/wrapped/wrappedgtk3.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedgtk3.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.s
+.PHONY : src/wrapped/wrappedgtk3.c.s
 
 src/wrapped/wrappedgtkx112.o: src/wrapped/wrappedgtkx112.c.o
 
@@ -3096,6 +3204,114 @@ src/wrapped/wrappediconv.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.s
 .PHONY : src/wrapped/wrappediconv.c.s
 
+src/wrapped/wrappedkrb5.o: src/wrapped/wrappedkrb5.c.o
+
+.PHONY : src/wrapped/wrappedkrb5.o
+
+# target to build an object file
+src/wrapped/wrappedkrb5.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o
+.PHONY : src/wrapped/wrappedkrb5.c.o
+
+src/wrapped/wrappedkrb5.i: src/wrapped/wrappedkrb5.c.i
+
+.PHONY : src/wrapped/wrappedkrb5.i
+
+# target to preprocess a source file
+src/wrapped/wrappedkrb5.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.i
+.PHONY : src/wrapped/wrappedkrb5.c.i
+
+src/wrapped/wrappedkrb5.s: src/wrapped/wrappedkrb5.c.s
+
+.PHONY : src/wrapped/wrappedkrb5.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedkrb5.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.s
+.PHONY : src/wrapped/wrappedkrb5.c.s
+
+src/wrapped/wrappedlber.o: src/wrapped/wrappedlber.c.o
+
+.PHONY : src/wrapped/wrappedlber.o
+
+# target to build an object file
+src/wrapped/wrappedlber.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o
+.PHONY : src/wrapped/wrappedlber.c.o
+
+src/wrapped/wrappedlber.i: src/wrapped/wrappedlber.c.i
+
+.PHONY : src/wrapped/wrappedlber.i
+
+# target to preprocess a source file
+src/wrapped/wrappedlber.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.i
+.PHONY : src/wrapped/wrappedlber.c.i
+
+src/wrapped/wrappedlber.s: src/wrapped/wrappedlber.c.s
+
+.PHONY : src/wrapped/wrappedlber.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedlber.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.s
+.PHONY : src/wrapped/wrappedlber.c.s
+
+src/wrapped/wrappedlcms2.o: src/wrapped/wrappedlcms2.c.o
+
+.PHONY : src/wrapped/wrappedlcms2.o
+
+# target to build an object file
+src/wrapped/wrappedlcms2.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o
+.PHONY : src/wrapped/wrappedlcms2.c.o
+
+src/wrapped/wrappedlcms2.i: src/wrapped/wrappedlcms2.c.i
+
+.PHONY : src/wrapped/wrappedlcms2.i
+
+# target to preprocess a source file
+src/wrapped/wrappedlcms2.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.i
+.PHONY : src/wrapped/wrappedlcms2.c.i
+
+src/wrapped/wrappedlcms2.s: src/wrapped/wrappedlcms2.c.s
+
+.PHONY : src/wrapped/wrappedlcms2.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedlcms2.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.s
+.PHONY : src/wrapped/wrappedlcms2.c.s
+
+src/wrapped/wrappedldapr.o: src/wrapped/wrappedldapr.c.o
+
+.PHONY : src/wrapped/wrappedldapr.o
+
+# target to build an object file
+src/wrapped/wrappedldapr.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o
+.PHONY : src/wrapped/wrappedldapr.c.o
+
+src/wrapped/wrappedldapr.i: src/wrapped/wrappedldapr.c.i
+
+.PHONY : src/wrapped/wrappedldapr.i
+
+# target to preprocess a source file
+src/wrapped/wrappedldapr.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.i
+.PHONY : src/wrapped/wrappedldapr.c.i
+
+src/wrapped/wrappedldapr.s: src/wrapped/wrappedldapr.c.s
+
+.PHONY : src/wrapped/wrappedldapr.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedldapr.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.s
+.PHONY : src/wrapped/wrappedldapr.c.s
+
 src/wrapped/wrappedldlinux.o: src/wrapped/wrappedldlinux.c.o
 
 .PHONY : src/wrapped/wrappedldlinux.o
@@ -3176,6 +3392,33 @@ src/wrapped/wrappedlibc.s: src/wrapped/wrappedlibc.c.s
 src/wrapped/wrappedlibc.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.s
 .PHONY : src/wrapped/wrappedlibc.c.s
+
+src/wrapped/wrappedlibcups.o: src/wrapped/wrappedlibcups.c.o
+
+.PHONY : src/wrapped/wrappedlibcups.o
+
+# target to build an object file
+src/wrapped/wrappedlibcups.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o
+.PHONY : src/wrapped/wrappedlibcups.c.o
+
+src/wrapped/wrappedlibcups.i: src/wrapped/wrappedlibcups.c.i
+
+.PHONY : src/wrapped/wrappedlibcups.i
+
+# target to preprocess a source file
+src/wrapped/wrappedlibcups.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.i
+.PHONY : src/wrapped/wrappedlibcups.c.i
+
+src/wrapped/wrappedlibcups.s: src/wrapped/wrappedlibcups.c.s
+
+.PHONY : src/wrapped/wrappedlibcups.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedlibcups.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.s
+.PHONY : src/wrapped/wrappedlibcups.c.s
 
 src/wrapped/wrappedlibdl.o: src/wrapped/wrappedlibdl.c.o
 
@@ -4689,6 +4932,33 @@ src/wrapped/wrappedmpg123.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.s
 .PHONY : src/wrapped/wrappedmpg123.c.s
 
+src/wrapped/wrappednsl.o: src/wrapped/wrappednsl.c.o
+
+.PHONY : src/wrapped/wrappednsl.o
+
+# target to build an object file
+src/wrapped/wrappednsl.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o
+.PHONY : src/wrapped/wrappednsl.c.o
+
+src/wrapped/wrappednsl.i: src/wrapped/wrappednsl.c.i
+
+.PHONY : src/wrapped/wrappednsl.i
+
+# target to preprocess a source file
+src/wrapped/wrappednsl.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.i
+.PHONY : src/wrapped/wrappednsl.c.i
+
+src/wrapped/wrappednsl.s: src/wrapped/wrappednsl.c.s
+
+.PHONY : src/wrapped/wrappednsl.s
+
+# target to generate assembly for a file
+src/wrapped/wrappednsl.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.s
+.PHONY : src/wrapped/wrappednsl.c.s
+
 src/wrapped/wrappedopenal.o: src/wrapped/wrappedopenal.c.o
 
 .PHONY : src/wrapped/wrappedopenal.o
@@ -5094,6 +5364,33 @@ src/wrapped/wrappedsdl2mixer.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.s
 .PHONY : src/wrapped/wrappedsdl2mixer.c.s
 
+src/wrapped/wrappedsdl2ttf.o: src/wrapped/wrappedsdl2ttf.c.o
+
+.PHONY : src/wrapped/wrappedsdl2ttf.o
+
+# target to build an object file
+src/wrapped/wrappedsdl2ttf.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o
+.PHONY : src/wrapped/wrappedsdl2ttf.c.o
+
+src/wrapped/wrappedsdl2ttf.i: src/wrapped/wrappedsdl2ttf.c.i
+
+.PHONY : src/wrapped/wrappedsdl2ttf.i
+
+# target to preprocess a source file
+src/wrapped/wrappedsdl2ttf.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.i
+.PHONY : src/wrapped/wrappedsdl2ttf.c.i
+
+src/wrapped/wrappedsdl2ttf.s: src/wrapped/wrappedsdl2ttf.c.s
+
+.PHONY : src/wrapped/wrappedsdl2ttf.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedsdl2ttf.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.s
+.PHONY : src/wrapped/wrappedsdl2ttf.c.s
+
 src/wrapped/wrappedsmpeg.o: src/wrapped/wrappedsmpeg.c.o
 
 .PHONY : src/wrapped/wrappedsmpeg.o
@@ -5174,6 +5471,33 @@ src/wrapped/wrappedtcmallocminimal.s: src/wrapped/wrappedtcmallocminimal.c.s
 src/wrapped/wrappedtcmallocminimal.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.s
 .PHONY : src/wrapped/wrappedtcmallocminimal.c.s
+
+src/wrapped/wrappedturbojpeg.o: src/wrapped/wrappedturbojpeg.c.o
+
+.PHONY : src/wrapped/wrappedturbojpeg.o
+
+# target to build an object file
+src/wrapped/wrappedturbojpeg.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o
+.PHONY : src/wrapped/wrappedturbojpeg.c.o
+
+src/wrapped/wrappedturbojpeg.i: src/wrapped/wrappedturbojpeg.c.i
+
+.PHONY : src/wrapped/wrappedturbojpeg.i
+
+# target to preprocess a source file
+src/wrapped/wrappedturbojpeg.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.i
+.PHONY : src/wrapped/wrappedturbojpeg.c.i
+
+src/wrapped/wrappedturbojpeg.s: src/wrapped/wrappedturbojpeg.c.s
+
+.PHONY : src/wrapped/wrappedturbojpeg.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedturbojpeg.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.s
+.PHONY : src/wrapped/wrappedturbojpeg.c.s
 
 src/wrapped/wrappedudev0.o: src/wrapped/wrappedudev0.c.o
 
@@ -5283,6 +5607,60 @@ src/wrapped/wrappedvorbisfile.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.s
 .PHONY : src/wrapped/wrappedvorbisfile.c.s
 
+src/wrapped/wrappedvulkan.o: src/wrapped/wrappedvulkan.c.o
+
+.PHONY : src/wrapped/wrappedvulkan.o
+
+# target to build an object file
+src/wrapped/wrappedvulkan.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o
+.PHONY : src/wrapped/wrappedvulkan.c.o
+
+src/wrapped/wrappedvulkan.i: src/wrapped/wrappedvulkan.c.i
+
+.PHONY : src/wrapped/wrappedvulkan.i
+
+# target to preprocess a source file
+src/wrapped/wrappedvulkan.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.i
+.PHONY : src/wrapped/wrappedvulkan.c.i
+
+src/wrapped/wrappedvulkan.s: src/wrapped/wrappedvulkan.c.s
+
+.PHONY : src/wrapped/wrappedvulkan.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedvulkan.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.s
+.PHONY : src/wrapped/wrappedvulkan.c.s
+
+src/wrapped/wrappedwaylandclient.o: src/wrapped/wrappedwaylandclient.c.o
+
+.PHONY : src/wrapped/wrappedwaylandclient.o
+
+# target to build an object file
+src/wrapped/wrappedwaylandclient.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o
+.PHONY : src/wrapped/wrappedwaylandclient.c.o
+
+src/wrapped/wrappedwaylandclient.i: src/wrapped/wrappedwaylandclient.c.i
+
+.PHONY : src/wrapped/wrappedwaylandclient.i
+
+# target to preprocess a source file
+src/wrapped/wrappedwaylandclient.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.i
+.PHONY : src/wrapped/wrappedwaylandclient.c.i
+
+src/wrapped/wrappedwaylandclient.s: src/wrapped/wrappedwaylandclient.c.s
+
+.PHONY : src/wrapped/wrappedwaylandclient.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedwaylandclient.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.s
+.PHONY : src/wrapped/wrappedwaylandclient.c.s
+
 src/wrapped/wrappedxinerama.o: src/wrapped/wrappedxinerama.c.o
 
 .PHONY : src/wrapped/wrappedxinerama.o
@@ -5309,6 +5687,60 @@ src/wrapped/wrappedxinerama.s: src/wrapped/wrappedxinerama.c.s
 src/wrapped/wrappedxinerama.c.s:
 	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.s
 .PHONY : src/wrapped/wrappedxinerama.c.s
+
+src/wrapped/wrappedxml2.o: src/wrapped/wrappedxml2.c.o
+
+.PHONY : src/wrapped/wrappedxml2.o
+
+# target to build an object file
+src/wrapped/wrappedxml2.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o
+.PHONY : src/wrapped/wrappedxml2.c.o
+
+src/wrapped/wrappedxml2.i: src/wrapped/wrappedxml2.c.i
+
+.PHONY : src/wrapped/wrappedxml2.i
+
+# target to preprocess a source file
+src/wrapped/wrappedxml2.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.i
+.PHONY : src/wrapped/wrappedxml2.c.i
+
+src/wrapped/wrappedxml2.s: src/wrapped/wrappedxml2.c.s
+
+.PHONY : src/wrapped/wrappedxml2.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedxml2.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.s
+.PHONY : src/wrapped/wrappedxml2.c.s
+
+src/wrapped/wrappedxslt.o: src/wrapped/wrappedxslt.c.o
+
+.PHONY : src/wrapped/wrappedxslt.o
+
+# target to build an object file
+src/wrapped/wrappedxslt.c.o:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o
+.PHONY : src/wrapped/wrappedxslt.c.o
+
+src/wrapped/wrappedxslt.i: src/wrapped/wrappedxslt.c.i
+
+.PHONY : src/wrapped/wrappedxslt.i
+
+# target to preprocess a source file
+src/wrapped/wrappedxslt.c.i:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.i
+.PHONY : src/wrapped/wrappedxslt.c.i
+
+src/wrapped/wrappedxslt.s: src/wrapped/wrappedxslt.c.s
+
+.PHONY : src/wrapped/wrappedxslt.s
+
+# target to generate assembly for a file
+src/wrapped/wrappedxslt.c.s:
+	$(MAKE) -f CMakeFiles/box86.dir/build.make CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.s
+.PHONY : src/wrapped/wrappedxslt.c.s
 
 # Help Target
 help:
@@ -5509,6 +5941,9 @@ help:
 	@echo "... src/libtools/threads.o"
 	@echo "... src/libtools/threads.i"
 	@echo "... src/libtools/threads.s"
+	@echo "... src/libtools/vkalign.o"
+	@echo "... src/libtools/vkalign.i"
+	@echo "... src/libtools/vkalign.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -5581,6 +6016,9 @@ help:
 	@echo "... src/wrapped/wrappedfreetype.o"
 	@echo "... src/wrapped/wrappedfreetype.i"
 	@echo "... src/wrapped/wrappedfreetype.s"
+	@echo "... src/wrapped/wrappedgdk3.o"
+	@echo "... src/wrapped/wrappedgdk3.i"
+	@echo "... src/wrapped/wrappedgdk3.s"
 	@echo "... src/wrapped/wrappedgdkpixbuf2.o"
 	@echo "... src/wrapped/wrappedgdkpixbuf2.i"
 	@echo "... src/wrapped/wrappedgdkpixbuf2.s"
@@ -5602,6 +6040,9 @@ help:
 	@echo "... src/wrapped/wrappedgobject2.o"
 	@echo "... src/wrapped/wrappedgobject2.i"
 	@echo "... src/wrapped/wrappedgobject2.s"
+	@echo "... src/wrapped/wrappedgssapikrb5.o"
+	@echo "... src/wrapped/wrappedgssapikrb5.i"
+	@echo "... src/wrapped/wrappedgssapikrb5.s"
 	@echo "... src/wrapped/wrappedgstinterfaces010.o"
 	@echo "... src/wrapped/wrappedgstinterfaces010.i"
 	@echo "... src/wrapped/wrappedgstinterfaces010.s"
@@ -5611,6 +6052,9 @@ help:
 	@echo "... src/wrapped/wrappedgthread2.o"
 	@echo "... src/wrapped/wrappedgthread2.i"
 	@echo "... src/wrapped/wrappedgthread2.s"
+	@echo "... src/wrapped/wrappedgtk3.o"
+	@echo "... src/wrapped/wrappedgtk3.i"
+	@echo "... src/wrapped/wrappedgtk3.s"
 	@echo "... src/wrapped/wrappedgtkx112.o"
 	@echo "... src/wrapped/wrappedgtkx112.i"
 	@echo "... src/wrapped/wrappedgtkx112.s"
@@ -5620,6 +6064,18 @@ help:
 	@echo "... src/wrapped/wrappediconv.o"
 	@echo "... src/wrapped/wrappediconv.i"
 	@echo "... src/wrapped/wrappediconv.s"
+	@echo "... src/wrapped/wrappedkrb5.o"
+	@echo "... src/wrapped/wrappedkrb5.i"
+	@echo "... src/wrapped/wrappedkrb5.s"
+	@echo "... src/wrapped/wrappedlber.o"
+	@echo "... src/wrapped/wrappedlber.i"
+	@echo "... src/wrapped/wrappedlber.s"
+	@echo "... src/wrapped/wrappedlcms2.o"
+	@echo "... src/wrapped/wrappedlcms2.i"
+	@echo "... src/wrapped/wrappedlcms2.s"
+	@echo "... src/wrapped/wrappedldapr.o"
+	@echo "... src/wrapped/wrappedldapr.i"
+	@echo "... src/wrapped/wrappedldapr.s"
 	@echo "... src/wrapped/wrappedldlinux.o"
 	@echo "... src/wrapped/wrappedldlinux.i"
 	@echo "... src/wrapped/wrappedldlinux.s"
@@ -5629,6 +6085,9 @@ help:
 	@echo "... src/wrapped/wrappedlibc.o"
 	@echo "... src/wrapped/wrappedlibc.i"
 	@echo "... src/wrapped/wrappedlibc.s"
+	@echo "... src/wrapped/wrappedlibcups.o"
+	@echo "... src/wrapped/wrappedlibcups.i"
+	@echo "... src/wrapped/wrappedlibcups.s"
 	@echo "... src/wrapped/wrappedlibdl.o"
 	@echo "... src/wrapped/wrappedlibdl.i"
 	@echo "... src/wrapped/wrappedlibdl.s"
@@ -5797,6 +6256,9 @@ help:
 	@echo "... src/wrapped/wrappedmpg123.o"
 	@echo "... src/wrapped/wrappedmpg123.i"
 	@echo "... src/wrapped/wrappedmpg123.s"
+	@echo "... src/wrapped/wrappednsl.o"
+	@echo "... src/wrapped/wrappednsl.i"
+	@echo "... src/wrapped/wrappednsl.s"
 	@echo "... src/wrapped/wrappedopenal.o"
 	@echo "... src/wrapped/wrappedopenal.i"
 	@echo "... src/wrapped/wrappedopenal.s"
@@ -5842,6 +6304,9 @@ help:
 	@echo "... src/wrapped/wrappedsdl2mixer.o"
 	@echo "... src/wrapped/wrappedsdl2mixer.i"
 	@echo "... src/wrapped/wrappedsdl2mixer.s"
+	@echo "... src/wrapped/wrappedsdl2ttf.o"
+	@echo "... src/wrapped/wrappedsdl2ttf.i"
+	@echo "... src/wrapped/wrappedsdl2ttf.s"
 	@echo "... src/wrapped/wrappedsmpeg.o"
 	@echo "... src/wrapped/wrappedsmpeg.i"
 	@echo "... src/wrapped/wrappedsmpeg.s"
@@ -5851,6 +6316,9 @@ help:
 	@echo "... src/wrapped/wrappedtcmallocminimal.o"
 	@echo "... src/wrapped/wrappedtcmallocminimal.i"
 	@echo "... src/wrapped/wrappedtcmallocminimal.s"
+	@echo "... src/wrapped/wrappedturbojpeg.o"
+	@echo "... src/wrapped/wrappedturbojpeg.i"
+	@echo "... src/wrapped/wrappedturbojpeg.s"
 	@echo "... src/wrapped/wrappedudev0.o"
 	@echo "... src/wrapped/wrappedudev0.i"
 	@echo "... src/wrapped/wrappedudev0.s"
@@ -5863,9 +6331,21 @@ help:
 	@echo "... src/wrapped/wrappedvorbisfile.o"
 	@echo "... src/wrapped/wrappedvorbisfile.i"
 	@echo "... src/wrapped/wrappedvorbisfile.s"
+	@echo "... src/wrapped/wrappedvulkan.o"
+	@echo "... src/wrapped/wrappedvulkan.i"
+	@echo "... src/wrapped/wrappedvulkan.s"
+	@echo "... src/wrapped/wrappedwaylandclient.o"
+	@echo "... src/wrapped/wrappedwaylandclient.i"
+	@echo "... src/wrapped/wrappedwaylandclient.s"
 	@echo "... src/wrapped/wrappedxinerama.o"
 	@echo "... src/wrapped/wrappedxinerama.i"
 	@echo "... src/wrapped/wrappedxinerama.s"
+	@echo "... src/wrapped/wrappedxml2.o"
+	@echo "... src/wrapped/wrappedxml2.i"
+	@echo "... src/wrapped/wrappedxml2.s"
+	@echo "... src/wrapped/wrappedxslt.o"
+	@echo "... src/wrapped/wrappedxslt.i"
+	@echo "... src/wrapped/wrappedxslt.s"
 .PHONY : help
 
 

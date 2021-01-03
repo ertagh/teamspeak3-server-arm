@@ -43,9 +43,5 @@ do
         #Sleep til sunday
         sleep "$seconds_next_sunday"s
 
-        #Section for the 1 week update checker
-        if [ $counter_check_update -gt $interval_check_update ]
-        then
-                . /teamspeak/sh/check_update.sh
-        fi
+        . /teamspeak/sh/check_update.sh
 done

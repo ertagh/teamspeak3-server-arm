@@ -32,6 +32,7 @@ CMakeFiles/dynarec_arm.dir/src/dynarec/dynablock.c.o
  ../src/include/x86run.h
  ../src/include/x86trace.h
  ../src/tools/bridge_private.h
+ /box86/src/dynarec/arm_lock_helper.h
  /box86/src/dynarec/dynablock.c
  /box86/src/dynarec/dynablock_private.h
  /box86/src/dynarec/dynarec_private.h
@@ -54,6 +55,7 @@ CMakeFiles/dynarec_arm.dir/src/dynarec/dynarec_arm.c.o
  ../src/tools/bridge_private.h
  /box86/src/dynarec/dynablock_private.h
  /box86/src/dynarec/dynarec_arm.c
+ /box86/src/dynarec/dynarec_arm_functions.h
  /box86/src/dynarec/dynarec_arm_private.h
  /box86/src/dynarec/dynarec_private.h
 CMakeFiles/dynarec_arm.dir/src/dynarec/dynarec_arm_functions.c.o

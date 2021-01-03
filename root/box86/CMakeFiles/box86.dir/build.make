@@ -95,6 +95,7 @@ include CMakeFiles/box86.dir/flags.make
 ../src/git_head.h: ../src/libtools/sdl2rwops.c
 ../src/git_head.h: ../src/libtools/signals.c
 ../src/git_head.h: ../src/libtools/threads.c
+../src/git_head.h: ../src/libtools/vkalign.c
 ../src/git_head.h: ../src/dynarec/dynarec.c
 ../src/git_head.h: ../src/wrapped/generated/wrapper.c
 ../src/git_head.h: ../src/wrapped/wrappedlibc.c
@@ -113,6 +114,7 @@ include CMakeFiles/box86.dir/flags.make
 ../src/git_head.h: ../src/wrapped/wrappedsdl2.c
 ../src/git_head.h: ../src/wrapped/wrappedsdl2mixer.c
 ../src/git_head.h: ../src/wrapped/wrappedsdl2image.c
+../src/git_head.h: ../src/wrapped/wrappedsdl2ttf.c
 ../src/git_head.h: ../src/wrapped/wrappedsmpeg.c
 ../src/git_head.h: ../src/wrapped/wrappedsmpeg2.c
 ../src/git_head.h: ../src/wrapped/wrappedvorbisfile.c
@@ -154,6 +156,7 @@ include CMakeFiles/box86.dir/flags.make
 ../src/git_head.h: ../src/wrapped/wrappedalut.c
 ../src/git_head.h: ../src/wrapped/wrappedlibjpeg.c
 ../src/git_head.h: ../src/wrapped/wrappedlibjpeg62.c
+../src/git_head.h: ../src/wrapped/wrappedturbojpeg.c
 ../src/git_head.h: ../src/wrapped/wrappedcurl.c
 ../src/git_head.h: ../src/wrapped/wrappedudev0.c
 ../src/git_head.h: ../src/wrapped/wrappedudev1.c
@@ -182,6 +185,8 @@ include CMakeFiles/box86.dir/flags.make
 ../src/git_head.h: ../src/wrapped/wrappedlibtinfo6.c
 ../src/git_head.h: ../src/wrapped/wrappedgtkx112.c
 ../src/git_head.h: ../src/wrapped/wrappedgdkx112.c
+../src/git_head.h: ../src/wrapped/wrappedgtk3.c
+../src/git_head.h: ../src/wrapped/wrappedgdk3.c
 ../src/git_head.h: ../src/wrapped/wrappedgdkpixbuf2.c
 ../src/git_head.h: ../src/wrapped/wrappedgio2.c
 ../src/git_head.h: ../src/wrapped/wrappedgmodule2.c
@@ -204,7 +209,18 @@ include CMakeFiles/box86.dir/flags.make
 ../src/git_head.h: ../src/wrapped/wrappedtcmallocminimal.c
 ../src/git_head.h: ../src/wrapped/wrappedmpg123.c
 ../src/git_head.h: ../src/wrapped/wrappedgnutls.c
+../src/git_head.h: ../src/wrapped/wrappedlibcups.c
 ../src/git_head.h: ../src/wrapped/wrappedd3dadapter9.c
+../src/git_head.h: ../src/wrapped/wrappedvulkan.c
+../src/git_head.h: ../src/wrapped/wrappedwaylandclient.c
+../src/git_head.h: ../src/wrapped/wrappedxml2.c
+../src/git_head.h: ../src/wrapped/wrappedxslt.c
+../src/git_head.h: ../src/wrapped/wrappedldapr.c
+../src/git_head.h: ../src/wrapped/wrappedlber.c
+../src/git_head.h: ../src/wrapped/wrappednsl.c
+../src/git_head.h: ../src/wrapped/wrappedlcms2.c
+../src/git_head.h: ../src/wrapped/wrappedkrb5.c
+../src/git_head.h: ../src/wrapped/wrappedgssapikrb5.c
 ../src/git_head.h: ../src/wrapped/wrappedldlinux.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../src/git_head.h"
 	bash -c "echo \\#define GITREV \\\"\$$(git rev-parse --short HEAD)\\\">\"/box86/src/git_head.h\""
@@ -690,9 +706,22 @@ CMakeFiles/box86.dir/src/libtools/threads.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/libtools/threads.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/libtools/threads.c -o CMakeFiles/box86.dir/src/libtools/threads.c.s
 
+CMakeFiles/box86.dir/src/libtools/vkalign.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/libtools/vkalign.c.o: ../src/libtools/vkalign.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/box86.dir/src/libtools/vkalign.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/libtools/vkalign.c.o   -c /box86/src/libtools/vkalign.c
+
+CMakeFiles/box86.dir/src/libtools/vkalign.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/libtools/vkalign.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/libtools/vkalign.c > CMakeFiles/box86.dir/src/libtools/vkalign.c.i
+
+CMakeFiles/box86.dir/src/libtools/vkalign.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/libtools/vkalign.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/libtools/vkalign.c -o CMakeFiles/box86.dir/src/libtools/vkalign.c.s
+
 CMakeFiles/box86.dir/src/dynarec/dynarec.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/dynarec/dynarec.c.o: ../src/dynarec/dynarec.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/box86.dir/src/dynarec/dynarec.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/box86.dir/src/dynarec/dynarec.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/dynarec/dynarec.c.o   -c /box86/src/dynarec/dynarec.c
 
 CMakeFiles/box86.dir/src/dynarec/dynarec.c.i: cmake_force
@@ -705,7 +734,7 @@ CMakeFiles/box86.dir/src/dynarec/dynarec.c.s: cmake_force
 
 CMakeFiles/box86.dir/src/wrapped/generated/wrapper.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/generated/wrapper.c.o: ../src/wrapped/generated/wrapper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/box86.dir/src/wrapped/generated/wrapper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/box86.dir/src/wrapped/generated/wrapper.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/generated/wrapper.c.o   -c /box86/src/wrapped/generated/wrapper.c
 
 CMakeFiles/box86.dir/src/wrapped/generated/wrapper.c.i: cmake_force
@@ -719,7 +748,7 @@ CMakeFiles/box86.dir/src/wrapped/generated/wrapper.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o: ../src/wrapped/wrappedlibc.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o: ../src/wrapped/wrappedlibc_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o   -c /box86/src/wrapped/wrappedlibc.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.i: cmake_force
@@ -733,7 +762,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibpthread.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibpthread.c.o: ../src/wrapped/wrappedlibpthread.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibpthread.c.o: ../src/wrapped/wrappedlibpthread_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibpthread.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibpthread.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibpthread.c.o   -c /box86/src/wrapped/wrappedlibpthread.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibpthread.c.i: cmake_force
@@ -747,7 +776,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibpthread.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibrt.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibrt.c.o: ../src/wrapped/wrappedlibrt.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibrt.c.o: ../src/wrapped/wrappedlibrt_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibrt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibrt.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibrt.c.o   -c /box86/src/wrapped/wrappedlibrt.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibrt.c.i: cmake_force
@@ -761,7 +790,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibrt.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibgl.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibgl.c.o: ../src/wrapped/wrappedlibgl.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibgl.c.o: ../src/wrapped/wrappedlibgl_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibgl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibgl.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibgl.c.o   -c /box86/src/wrapped/wrappedlibgl.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibgl.c.i: cmake_force
@@ -775,7 +804,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibgl.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibglu.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibglu.c.o: ../src/wrapped/wrappedlibglu.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibglu.c.o: ../src/wrapped/wrappedlibglu_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibglu.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibglu.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibglu.c.o   -c /box86/src/wrapped/wrappedlibglu.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibglu.c.i: cmake_force
@@ -789,7 +818,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibglu.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibx11.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibx11.c.o: ../src/wrapped/wrappedlibx11.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibx11.c.o: ../src/wrapped/wrappedlibx11_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibx11.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibx11.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibx11.c.o   -c /box86/src/wrapped/wrappedlibx11.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibx11.c.i: cmake_force
@@ -803,7 +832,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibx11.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibasound.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibasound.c.o: ../src/wrapped/wrappedlibasound.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibasound.c.o: ../src/wrapped/wrappedlibasound_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibasound.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibasound.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibasound.c.o   -c /box86/src/wrapped/wrappedlibasound.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibasound.c.i: cmake_force
@@ -817,7 +846,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibasound.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibdl.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibdl.c.o: ../src/wrapped/wrappedlibdl.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibdl.c.o: ../src/wrapped/wrappedlibdl_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibdl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibdl.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibdl.c.o   -c /box86/src/wrapped/wrappedlibdl.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibdl.c.i: cmake_force
@@ -831,7 +860,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibdl.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibm.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibm.c.o: ../src/wrapped/wrappedlibm.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibm.c.o: ../src/wrapped/wrappedlibm_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibm.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibm.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibm.c.o   -c /box86/src/wrapped/wrappedlibm.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibm.c.i: cmake_force
@@ -845,7 +874,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibm.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: ../src/wrapped/wrappedsdl1.c
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o: ../src/wrapped/wrappedsdl1_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.o   -c /box86/src/wrapped/wrappedsdl1.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.i: cmake_force
@@ -859,7 +888,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsdl1.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1mixer.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1mixer.c.o: ../src/wrapped/wrappedsdl1mixer.c
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1mixer.c.o: ../src/wrapped/wrappedsdl1mixer_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl1mixer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl1mixer.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedsdl1mixer.c.o   -c /box86/src/wrapped/wrappedsdl1mixer.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1mixer.c.i: cmake_force
@@ -873,7 +902,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsdl1mixer.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1image.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1image.c.o: ../src/wrapped/wrappedsdl1image.c
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1image.c.o: ../src/wrapped/wrappedsdl1image_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl1image.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl1image.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedsdl1image.c.o   -c /box86/src/wrapped/wrappedsdl1image.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1image.c.i: cmake_force
@@ -887,7 +916,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsdl1image.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1ttf.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1ttf.c.o: ../src/wrapped/wrappedsdl1ttf.c
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1ttf.c.o: ../src/wrapped/wrappedsdl1ttf_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl1ttf.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl1ttf.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedsdl1ttf.c.o   -c /box86/src/wrapped/wrappedsdl1ttf.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl1ttf.c.i: cmake_force
@@ -901,7 +930,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsdl1ttf.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: ../src/wrapped/wrappedsdl2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o: ../src/wrapped/wrappedsdl2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o   -c /box86/src/wrapped/wrappedsdl2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.i: cmake_force
@@ -915,7 +944,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o: ../src/wrapped/wrappedsdl2mixer.c
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o: ../src/wrapped/wrappedsdl2mixer_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o   -c /box86/src/wrapped/wrappedsdl2mixer.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.i: cmake_force
@@ -929,7 +958,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.o: ../src/wrapped/wrappedsdl2image.c
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.o: ../src/wrapped/wrappedsdl2image_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.o   -c /box86/src/wrapped/wrappedsdl2image.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.i: cmake_force
@@ -940,10 +969,24 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedsdl2image.c -o CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.s
 
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/wrapped/wrappedsdl2ttf.c
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o: ../src/wrapped/wrappedsdl2ttf_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o   -c /box86/src/wrapped/wrappedsdl2ttf.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedsdl2ttf.c > CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedsdl2ttf.c -o CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.s
+
 CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.o: ../src/wrapped/wrappedsmpeg.c
 CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.o: ../src/wrapped/wrappedsmpeg_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.o   -c /box86/src/wrapped/wrappedsmpeg.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.i: cmake_force
@@ -957,7 +1000,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg2.c.o: ../src/wrapped/wrappedsmpeg2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg2.c.o: ../src/wrapped/wrappedsmpeg2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg2.c.o   -c /box86/src/wrapped/wrappedsmpeg2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg2.c.i: cmake_force
@@ -971,7 +1014,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o: ../src/wrapped/wrappedvorbisfile.c
 CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o: ../src/wrapped/wrappedvorbisfile_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o   -c /box86/src/wrapped/wrappedvorbisfile.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.i: cmake_force
@@ -985,7 +1028,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibvorbis.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibvorbis.c.o: ../src/wrapped/wrappedlibvorbis.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibvorbis.c.o: ../src/wrapped/wrappedlibvorbis_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibvorbis.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibvorbis.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibvorbis.c.o   -c /box86/src/wrapped/wrappedlibvorbis.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibvorbis.c.i: cmake_force
@@ -999,7 +1042,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibvorbis.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibogg.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibogg.c.o: ../src/wrapped/wrappedlibogg.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibogg.c.o: ../src/wrapped/wrappedlibogg_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibogg.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibogg.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibogg.c.o   -c /box86/src/wrapped/wrappedlibogg.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibogg.c.i: cmake_force
@@ -1013,7 +1056,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibogg.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedpng12.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedpng12.c.o: ../src/wrapped/wrappedpng12.c
 CMakeFiles/box86.dir/src/wrapped/wrappedpng12.c.o: ../src/wrapped/wrappedpng12_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpng12.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpng12.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedpng12.c.o   -c /box86/src/wrapped/wrappedpng12.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedpng12.c.i: cmake_force
@@ -1027,7 +1070,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedpng12.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedpng16.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedpng16.c.o: ../src/wrapped/wrappedpng16.c
 CMakeFiles/box86.dir/src/wrapped/wrappedpng16.c.o: ../src/wrapped/wrappedpng16_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpng16.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpng16.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedpng16.c.o   -c /box86/src/wrapped/wrappedpng16.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedpng16.c.i: cmake_force
@@ -1041,7 +1084,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedpng16.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxxf86vm.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxxf86vm.c.o: ../src/wrapped/wrappedlibxxf86vm.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxxf86vm.c.o: ../src/wrapped/wrappedlibxxf86vm_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxxf86vm.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxxf86vm.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxxf86vm.c.o   -c /box86/src/wrapped/wrappedlibxxf86vm.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxxf86vm.c.i: cmake_force
@@ -1055,7 +1098,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxxf86vm.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxrandr.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxrandr.c.o: ../src/wrapped/wrappedlibxrandr.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxrandr.c.o: ../src/wrapped/wrappedlibxrandr_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxrandr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxrandr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxrandr.c.o   -c /box86/src/wrapped/wrappedlibxrandr.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxrandr.c.i: cmake_force
@@ -1069,7 +1112,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxrandr.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxext.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxext.c.o: ../src/wrapped/wrappedlibxext.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxext.c.o: ../src/wrapped/wrappedlibxext_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxext.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxext.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxext.c.o   -c /box86/src/wrapped/wrappedlibxext.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxext.c.i: cmake_force
@@ -1083,7 +1126,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxext.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o: ../src/wrapped/wrappedxinerama.c
 CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o: ../src/wrapped/wrappedxinerama_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.o   -c /box86/src/wrapped/wrappedxinerama.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.i: cmake_force
@@ -1097,7 +1140,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedxinerama.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxfixes.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxfixes.c.o: ../src/wrapped/wrappedlibxfixes.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxfixes.c.o: ../src/wrapped/wrappedlibxfixes_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxfixes.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxfixes.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxfixes.c.o   -c /box86/src/wrapped/wrappedlibxfixes.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxfixes.c.i: cmake_force
@@ -1111,7 +1154,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxfixes.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcursor.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcursor.c.o: ../src/wrapped/wrappedlibxcursor.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcursor.c.o: ../src/wrapped/wrappedlibxcursor_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcursor.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcursor.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcursor.c.o   -c /box86/src/wrapped/wrappedlibxcursor.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcursor.c.i: cmake_force
@@ -1125,7 +1168,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcursor.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxrender.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxrender.c.o: ../src/wrapped/wrappedlibxrender.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxrender.c.o: ../src/wrapped/wrappedlibxrender_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxrender.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxrender.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxrender.c.o   -c /box86/src/wrapped/wrappedlibxrender.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxrender.c.i: cmake_force
@@ -1139,7 +1182,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxrender.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxi.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxi.c.o: ../src/wrapped/wrappedlibxi.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxi.c.o: ../src/wrapped/wrappedlibxi_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxi.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxi.c.o   -c /box86/src/wrapped/wrappedlibxi.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxi.c.i: cmake_force
@@ -1153,7 +1196,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxi.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxss.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxss.c.o: ../src/wrapped/wrappedlibxss.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxss.c.o: ../src/wrapped/wrappedlibxss_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxss.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxss.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxss.c.o   -c /box86/src/wrapped/wrappedlibxss.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxss.c.i: cmake_force
@@ -1167,7 +1210,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxss.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxpm.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxpm.c.o: ../src/wrapped/wrappedlibxpm.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxpm.c.o: ../src/wrapped/wrappedlibxpm_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxpm.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxpm.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxpm.c.o   -c /box86/src/wrapped/wrappedlibxpm.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxpm.c.i: cmake_force
@@ -1181,7 +1224,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxpm.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxau.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxau.c.o: ../src/wrapped/wrappedlibxau.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxau.c.o: ../src/wrapped/wrappedlibxau_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxau.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxau.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxau.c.o   -c /box86/src/wrapped/wrappedlibxau.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxau.c.i: cmake_force
@@ -1195,7 +1238,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxau.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxdmcp.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxdmcp.c.o: ../src/wrapped/wrappedlibxdmcp.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxdmcp.c.o: ../src/wrapped/wrappedlibxdmcp_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxdmcp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxdmcp.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxdmcp.c.o   -c /box86/src/wrapped/wrappedlibxdmcp.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxdmcp.c.i: cmake_force
@@ -1209,7 +1252,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxdmcp.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibx11xcb.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibx11xcb.c.o: ../src/wrapped/wrappedlibx11xcb.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibx11xcb.c.o: ../src/wrapped/wrappedlibx11xcb_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibx11xcb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibx11xcb.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibx11xcb.c.o   -c /box86/src/wrapped/wrappedlibx11xcb.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibx11xcb.c.i: cmake_force
@@ -1223,7 +1266,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibx11xcb.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcb.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcb.c.o: ../src/wrapped/wrappedlibxcb.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcb.c.o: ../src/wrapped/wrappedlibxcb_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcb.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcb.c.o   -c /box86/src/wrapped/wrappedlibxcb.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcb.c.i: cmake_force
@@ -1237,7 +1280,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcb.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxfixes.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxfixes.c.o: ../src/wrapped/wrappedlibxcbxfixes.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxfixes.c.o: ../src/wrapped/wrappedlibxcbxfixes_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxfixes.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxfixes.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxfixes.c.o   -c /box86/src/wrapped/wrappedlibxcbxfixes.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxfixes.c.i: cmake_force
@@ -1251,7 +1294,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxfixes.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshape.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshape.c.o: ../src/wrapped/wrappedlibxcbshape.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshape.c.o: ../src/wrapped/wrappedlibxcbshape_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshape.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshape.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshape.c.o   -c /box86/src/wrapped/wrappedlibxcbshape.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshape.c.i: cmake_force
@@ -1265,7 +1308,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshape.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshm.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshm.c.o: ../src/wrapped/wrappedlibxcbshm.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshm.c.o: ../src/wrapped/wrappedlibxcbshm_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshm.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshm.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshm.c.o   -c /box86/src/wrapped/wrappedlibxcbshm.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshm.c.i: cmake_force
@@ -1279,7 +1322,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbshm.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbrandr.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbrandr.c.o: ../src/wrapped/wrappedlibxcbrandr.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbrandr.c.o: ../src/wrapped/wrappedlibxcbrandr_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbrandr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbrandr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbrandr.c.o   -c /box86/src/wrapped/wrappedlibxcbrandr.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbrandr.c.i: cmake_force
@@ -1293,7 +1336,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbrandr.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbimage.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbimage.c.o: ../src/wrapped/wrappedlibxcbimage.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbimage.c.o: ../src/wrapped/wrappedlibxcbimage_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbimage.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbimage.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbimage.c.o   -c /box86/src/wrapped/wrappedlibxcbimage.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbimage.c.i: cmake_force
@@ -1307,7 +1350,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbimage.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbkeysyms.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbkeysyms.c.o: ../src/wrapped/wrappedlibxcbkeysyms.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbkeysyms.c.o: ../src/wrapped/wrappedlibxcbkeysyms_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbkeysyms.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbkeysyms.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbkeysyms.c.o   -c /box86/src/wrapped/wrappedlibxcbkeysyms.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbkeysyms.c.i: cmake_force
@@ -1321,7 +1364,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbkeysyms.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxtest.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxtest.c.o: ../src/wrapped/wrappedlibxcbxtest.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxtest.c.o: ../src/wrapped/wrappedlibxcbxtest_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxtest.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxtest.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxtest.c.o   -c /box86/src/wrapped/wrappedlibxcbxtest.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxtest.c.i: cmake_force
@@ -1335,7 +1378,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbxtest.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri2.c.o: ../src/wrapped/wrappedlibxcbdri2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri2.c.o: ../src/wrapped/wrappedlibxcbdri2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri2.c.o   -c /box86/src/wrapped/wrappedlibxcbdri2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri2.c.i: cmake_force
@@ -1349,7 +1392,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri3.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri3.c.o: ../src/wrapped/wrappedlibxcbdri3.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri3.c.o: ../src/wrapped/wrappedlibxcbdri3_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri3.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri3.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri3.c.o   -c /box86/src/wrapped/wrappedlibxcbdri3.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri3.c.i: cmake_force
@@ -1363,7 +1406,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbdri3.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbpresent.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbpresent.c.o: ../src/wrapped/wrappedlibxcbpresent.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbpresent.c.o: ../src/wrapped/wrappedlibxcbpresent_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbpresent.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbpresent.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbpresent.c.o   -c /box86/src/wrapped/wrappedlibxcbpresent.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbpresent.c.i: cmake_force
@@ -1377,7 +1420,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcbpresent.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxtst.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxtst.c.o: ../src/wrapped/wrappedlibxtst.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxtst.c.o: ../src/wrapped/wrappedlibxtst_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxtst.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxtst.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxtst.c.o   -c /box86/src/wrapped/wrappedlibxtst.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxtst.c.i: cmake_force
@@ -1391,7 +1434,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxtst.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxt.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxt.c.o: ../src/wrapped/wrappedlibxt.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxt.c.o: ../src/wrapped/wrappedlibxt_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxt.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxt.c.o   -c /box86/src/wrapped/wrappedlibxt.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxt.c.i: cmake_force
@@ -1405,7 +1448,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxt.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcomposite.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcomposite.c.o: ../src/wrapped/wrappedlibxcomposite.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcomposite.c.o: ../src/wrapped/wrappedlibxcomposite_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcomposite.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxcomposite.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxcomposite.c.o   -c /box86/src/wrapped/wrappedlibxcomposite.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxcomposite.c.i: cmake_force
@@ -1419,7 +1462,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxcomposite.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxdamage.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxdamage.c.o: ../src/wrapped/wrappedlibxdamage.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxdamage.c.o: ../src/wrapped/wrappedlibxdamage_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxdamage.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxdamage.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxdamage.c.o   -c /box86/src/wrapped/wrappedlibxdamage.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxdamage.c.i: cmake_force
@@ -1433,7 +1476,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxdamage.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxmu.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxmu.c.o: ../src/wrapped/wrappedlibxmu.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxmu.c.o: ../src/wrapped/wrappedlibxmu_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxmu.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibxmu.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibxmu.c.o   -c /box86/src/wrapped/wrappedlibxmu.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibxmu.c.i: cmake_force
@@ -1447,7 +1490,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibxmu.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibz.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibz.c.o: ../src/wrapped/wrappedlibz.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibz.c.o: ../src/wrapped/wrappedlibz_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibz.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibz.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibz.c.o   -c /box86/src/wrapped/wrappedlibz.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibz.c.i: cmake_force
@@ -1461,7 +1504,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibz.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o: ../src/wrapped/wrappedopenal.c
 CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o: ../src/wrapped/wrappedopenal_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o   -c /box86/src/wrapped/wrappedopenal.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.i: cmake_force
@@ -1475,7 +1518,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.o: ../src/wrapped/wrappedalut.c
 CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.o: ../src/wrapped/wrappedalut_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.o   -c /box86/src/wrapped/wrappedalut.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.i: cmake_force
@@ -1489,7 +1532,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg.c.o: ../src/wrapped/wrappedlibjpeg.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg.c.o: ../src/wrapped/wrappedlibjpeg_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg.c.o   -c /box86/src/wrapped/wrappedlibjpeg.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg.c.i: cmake_force
@@ -1503,7 +1546,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.o: ../src/wrapped/wrappedlibjpeg62.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.o: ../src/wrapped/wrappedlibjpeg62_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.o   -c /box86/src/wrapped/wrappedlibjpeg62.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.i: cmake_force
@@ -1514,10 +1557,24 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedlibjpeg62.c -o CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.s
 
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/wrapped/wrappedturbojpeg.c
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o: ../src/wrapped/wrappedturbojpeg_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o   -c /box86/src/wrapped/wrappedturbojpeg.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedturbojpeg.c > CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedturbojpeg.c -o CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.s
+
 CMakeFiles/box86.dir/src/wrapped/wrappedcurl.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedcurl.c.o: ../src/wrapped/wrappedcurl.c
 CMakeFiles/box86.dir/src/wrapped/wrappedcurl.c.o: ../src/wrapped/wrappedcurl_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedcurl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedcurl.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedcurl.c.o   -c /box86/src/wrapped/wrappedcurl.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedcurl.c.i: cmake_force
@@ -1531,7 +1588,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedcurl.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.o: ../src/wrapped/wrappedudev0.c
 CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.o: ../src/wrapped/wrappedudev0_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.o   -c /box86/src/wrapped/wrappedudev0.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.i: cmake_force
@@ -1545,7 +1602,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedudev1.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedudev1.c.o: ../src/wrapped/wrappedudev1.c
 CMakeFiles/box86.dir/src/wrapped/wrappedudev1.c.o: ../src/wrapped/wrappedudev1_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedudev1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedudev1.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedudev1.c.o   -c /box86/src/wrapped/wrappedudev1.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedudev1.c.i: cmake_force
@@ -1559,7 +1616,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedudev1.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappeddbus.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappeddbus.c.o: ../src/wrapped/wrappeddbus.c
 CMakeFiles/box86.dir/src/wrapped/wrappeddbus.c.o: ../src/wrapped/wrappeddbus_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappeddbus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappeddbus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappeddbus.c.o   -c /box86/src/wrapped/wrappeddbus.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappeddbus.c.i: cmake_force
@@ -1573,7 +1630,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappeddbus.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.o: ../src/wrapped/wrappediconv.c
 CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.o: ../src/wrapped/wrappediconv_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.o   -c /box86/src/wrapped/wrappediconv.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.i: cmake_force
@@ -1587,7 +1644,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappediconv.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibdrm.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibdrm.c.o: ../src/wrapped/wrappedlibdrm.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibdrm.c.o: ../src/wrapped/wrappedlibdrm_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibdrm.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibdrm.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibdrm.c.o   -c /box86/src/wrapped/wrappedlibdrm.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibdrm.c.i: cmake_force
@@ -1601,7 +1658,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibdrm.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedcrypto.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedcrypto.c.o: ../src/wrapped/wrappedcrypto.c
 CMakeFiles/box86.dir/src/wrapped/wrappedcrypto.c.o: ../src/wrapped/wrappedcrypto_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedcrypto.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedcrypto.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedcrypto.c.o   -c /box86/src/wrapped/wrappedcrypto.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedcrypto.c.i: cmake_force
@@ -1615,7 +1672,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedcrypto.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibssl.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibssl.c.o: ../src/wrapped/wrappedlibssl.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibssl.c.o: ../src/wrapped/wrappedlibssl_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibssl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibssl.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibssl.c.o   -c /box86/src/wrapped/wrappedlibssl.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibssl.c.i: cmake_force
@@ -1629,7 +1686,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibssl.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedutil.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedutil.c.o: ../src/wrapped/wrappedutil.c
 CMakeFiles/box86.dir/src/wrapped/wrappedutil.c.o: ../src/wrapped/wrappedutil_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedutil.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedutil.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedutil.c.o   -c /box86/src/wrapped/wrappedutil.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedutil.c.i: cmake_force
@@ -1643,7 +1700,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedutil.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibuuid.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibuuid.c.o: ../src/wrapped/wrappedlibuuid.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibuuid.c.o: ../src/wrapped/wrappedlibuuid_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibuuid.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibuuid.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibuuid.c.o   -c /box86/src/wrapped/wrappedlibuuid.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibuuid.c.i: cmake_force
@@ -1657,7 +1714,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibuuid.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibresolv.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibresolv.c.o: ../src/wrapped/wrappedlibresolv.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibresolv.c.o: ../src/wrapped/wrappedlibresolv_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibresolv.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibresolv.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibresolv.c.o   -c /box86/src/wrapped/wrappedlibresolv.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibresolv.c.i: cmake_force
@@ -1671,7 +1728,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibresolv.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedpulsesimple.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedpulsesimple.c.o: ../src/wrapped/wrappedpulsesimple.c
 CMakeFiles/box86.dir/src/wrapped/wrappedpulsesimple.c.o: ../src/wrapped/wrappedpulsesimple_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpulsesimple.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpulsesimple.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedpulsesimple.c.o   -c /box86/src/wrapped/wrappedpulsesimple.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedpulsesimple.c.i: cmake_force
@@ -1685,7 +1742,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedpulsesimple.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedpulse.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedpulse.c.o: ../src/wrapped/wrappedpulse.c
 CMakeFiles/box86.dir/src/wrapped/wrappedpulse.c.o: ../src/wrapped/wrappedpulse_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpulse.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpulse.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedpulse.c.o   -c /box86/src/wrapped/wrappedpulse.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedpulse.c.i: cmake_force
@@ -1699,7 +1756,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedpulse.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibsndfile.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibsndfile.c.o: ../src/wrapped/wrappedlibsndfile.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibsndfile.c.o: ../src/wrapped/wrappedlibsndfile_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibsndfile.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibsndfile.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibsndfile.c.o   -c /box86/src/wrapped/wrappedlibsndfile.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibsndfile.c.i: cmake_force
@@ -1713,7 +1770,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibsndfile.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedfontconfig.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedfontconfig.c.o: ../src/wrapped/wrappedfontconfig.c
 CMakeFiles/box86.dir/src/wrapped/wrappedfontconfig.c.o: ../src/wrapped/wrappedfontconfig_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedfontconfig.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedfontconfig.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedfontconfig.c.o   -c /box86/src/wrapped/wrappedfontconfig.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedfontconfig.c.i: cmake_force
@@ -1727,7 +1784,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedfontconfig.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.o: ../src/wrapped/wrappedfreetype.c
 CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.o: ../src/wrapped/wrappedfreetype_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.o   -c /box86/src/wrapped/wrappedfreetype.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.i: cmake_force
@@ -1741,7 +1798,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedfreetype.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedbz2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedbz2.c.o: ../src/wrapped/wrappedbz2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedbz2.c.o: ../src/wrapped/wrappedbz2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedbz2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedbz2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedbz2.c.o   -c /box86/src/wrapped/wrappedbz2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedbz2.c.i: cmake_force
@@ -1755,7 +1812,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedbz2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibsm.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibsm.c.o: ../src/wrapped/wrappedlibsm.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibsm.c.o: ../src/wrapped/wrappedlibsm_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibsm.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibsm.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibsm.c.o   -c /box86/src/wrapped/wrappedlibsm.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibsm.c.i: cmake_force
@@ -1769,7 +1826,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibsm.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibice.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibice.c.o: ../src/wrapped/wrappedlibice.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibice.c.o: ../src/wrapped/wrappedlibice_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibice.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibice.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibice.c.o   -c /box86/src/wrapped/wrappedlibice.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibice.c.i: cmake_force
@@ -1783,7 +1840,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibice.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibusb1.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibusb1.c.o: ../src/wrapped/wrappedlibusb1.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibusb1.c.o: ../src/wrapped/wrappedlibusb1_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibusb1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibusb1.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibusb1.c.o   -c /box86/src/wrapped/wrappedlibusb1.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibusb1.c.i: cmake_force
@@ -1797,7 +1854,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibusb1.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncursesw.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncursesw.c.o: ../src/wrapped/wrappedlibncursesw.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncursesw.c.o: ../src/wrapped/wrappedlibncursesw_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibncursesw.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibncursesw.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibncursesw.c.o   -c /box86/src/wrapped/wrappedlibncursesw.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncursesw.c.i: cmake_force
@@ -1811,7 +1868,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibncursesw.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibformw.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibformw.c.o: ../src/wrapped/wrappedlibformw.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibformw.c.o: ../src/wrapped/wrappedlibformw_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibformw.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibformw.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibformw.c.o   -c /box86/src/wrapped/wrappedlibformw.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibformw.c.i: cmake_force
@@ -1825,7 +1882,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibformw.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses.c.o: ../src/wrapped/wrappedlibncurses.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses.c.o: ../src/wrapped/wrappedlibncurses_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses.c.o   -c /box86/src/wrapped/wrappedlibncurses.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses.c.i: cmake_force
@@ -1839,7 +1896,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo.c.o: ../src/wrapped/wrappedlibtinfo.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo.c.o: ../src/wrapped/wrappedlibtinfo_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo.c.o   -c /box86/src/wrapped/wrappedlibtinfo.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo.c.i: cmake_force
@@ -1853,7 +1910,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses6.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses6.c.o: ../src/wrapped/wrappedlibncurses6.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses6.c.o: ../src/wrapped/wrappedlibncurses6_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses6.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses6.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses6.c.o   -c /box86/src/wrapped/wrappedlibncurses6.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses6.c.i: cmake_force
@@ -1867,7 +1924,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses6.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo6.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo6.c.o: ../src/wrapped/wrappedlibtinfo6.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo6.c.o: ../src/wrapped/wrappedlibtinfo6_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo6.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo6.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo6.c.o   -c /box86/src/wrapped/wrappedlibtinfo6.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo6.c.i: cmake_force
@@ -1881,7 +1938,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo6.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o: ../src/wrapped/wrappedgtkx112.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o: ../src/wrapped/wrappedgtkx112_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o   -c /box86/src/wrapped/wrappedgtkx112.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.i: cmake_force
@@ -1895,7 +1952,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.o: ../src/wrapped/wrappedgdkx112.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.o: ../src/wrapped/wrappedgdkx112_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.o   -c /box86/src/wrapped/wrappedgdkx112.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.i: cmake_force
@@ -1906,10 +1963,38 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedgdkx112.c -o CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.s
 
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/wrapped/wrappedgtk3.c
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o: ../src/wrapped/wrappedgtk3_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o   -c /box86/src/wrapped/wrappedgtk3.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedgtk3.c > CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedgtk3.c -o CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.s
+
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/wrapped/wrappedgdk3.c
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o: ../src/wrapped/wrappedgdk3_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o   -c /box86/src/wrapped/wrappedgdk3.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedgdk3.c > CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedgdk3.c -o CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.s
+
 CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.o: ../src/wrapped/wrappedgdkpixbuf2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.o: ../src/wrapped/wrappedgdkpixbuf2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.o   -c /box86/src/wrapped/wrappedgdkpixbuf2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.i: cmake_force
@@ -1923,7 +2008,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedgio2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgio2.c.o: ../src/wrapped/wrappedgio2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgio2.c.o: ../src/wrapped/wrappedgio2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgio2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgio2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgio2.c.o   -c /box86/src/wrapped/wrappedgio2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgio2.c.i: cmake_force
@@ -1937,7 +2022,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgio2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o: ../src/wrapped/wrappedgmodule2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o: ../src/wrapped/wrappedgmodule2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o   -c /box86/src/wrapped/wrappedgmodule2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.i: cmake_force
@@ -1951,7 +2036,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/wrapped/wrappedgobject2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o: ../src/wrapped/wrappedgobject2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.o   -c /box86/src/wrapped/wrappedgobject2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.i: cmake_force
@@ -1965,7 +2050,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgobject2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/wrapped/wrappedglib2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o: ../src/wrapped/wrappedglib2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.o   -c /box86/src/wrapped/wrappedglib2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.i: cmake_force
@@ -1979,7 +2064,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedglib2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o: ../src/wrapped/wrappedgstreamer010.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o: ../src/wrapped/wrappedgstreamer010_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.o   -c /box86/src/wrapped/wrappedgstreamer010.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.i: cmake_force
@@ -1993,7 +2078,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgstreamer010.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o: ../src/wrapped/wrappedgstinterfaces010.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o: ../src/wrapped/wrappedgstinterfaces010_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.o   -c /box86/src/wrapped/wrappedgstinterfaces010.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.i: cmake_force
@@ -2007,7 +2092,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgstinterfaces010.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o: ../src/wrapped/wrappeddbusmenugtk.c
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o: ../src/wrapped/wrappeddbusmenugtk_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.o   -c /box86/src/wrapped/wrappeddbusmenugtk.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.i: cmake_force
@@ -2021,7 +2106,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenugtk.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenuglib.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenuglib.c.o: ../src/wrapped/wrappeddbusmenuglib.c
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenuglib.c.o: ../src/wrapped/wrappeddbusmenuglib_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenuglib.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenuglib.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenuglib.c.o   -c /box86/src/wrapped/wrappeddbusmenuglib.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenuglib.c.i: cmake_force
@@ -2035,7 +2120,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappeddbusmenuglib.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o: ../src/wrapped/wrappedappindicator.c
 CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o: ../src/wrapped/wrappedappindicator_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.o   -c /box86/src/wrapped/wrappedappindicator.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.i: cmake_force
@@ -2049,7 +2134,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedappindicator.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o: ../src/wrapped/wrappedatk.c
 CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o: ../src/wrapped/wrappedatk_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.o   -c /box86/src/wrapped/wrappedatk.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.i: cmake_force
@@ -2063,7 +2148,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedatk.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedpangoft2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedpangoft2.c.o: ../src/wrapped/wrappedpangoft2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedpangoft2.c.o: ../src/wrapped/wrappedpangoft2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpangoft2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpangoft2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedpangoft2.c.o   -c /box86/src/wrapped/wrappedpangoft2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedpangoft2.c.i: cmake_force
@@ -2077,7 +2162,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedpangoft2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o: ../src/wrapped/wrappedpangocairo.c
 CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o: ../src/wrapped/wrappedpangocairo_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.o   -c /box86/src/wrapped/wrappedpangocairo.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.i: cmake_force
@@ -2091,7 +2176,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedpangocairo.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.o: ../src/wrapped/wrappedgthread2.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.o: ../src/wrapped/wrappedgthread2_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.o   -c /box86/src/wrapped/wrappedgthread2.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.i: cmake_force
@@ -2105,7 +2190,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgthread2.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o: ../src/wrapped/wrappedcairo.c
 CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o: ../src/wrapped/wrappedcairo_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.o   -c /box86/src/wrapped/wrappedcairo.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.i: cmake_force
@@ -2119,7 +2204,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedcairo.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/wrapped/wrappedpango.c
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o: ../src/wrapped/wrappedpango_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.o   -c /box86/src/wrapped/wrappedpango.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.i: cmake_force
@@ -2133,7 +2218,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedpango.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusglib1.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusglib1.c.o: ../src/wrapped/wrappeddbusglib1.c
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusglib1.c.o: ../src/wrapped/wrappeddbusglib1_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappeddbusglib1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappeddbusglib1.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappeddbusglib1.c.o   -c /box86/src/wrapped/wrappeddbusglib1.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappeddbusglib1.c.i: cmake_force
@@ -2147,7 +2232,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappeddbusglib1.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o: ../src/wrapped/wrappedgudev1.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o: ../src/wrapped/wrappedgudev1_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.o   -c /box86/src/wrapped/wrappedgudev1.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.i: cmake_force
@@ -2161,7 +2246,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgudev1.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o: ../src/wrapped/wrappedlibnm.c
 CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o: ../src/wrapped/wrappedlibnm_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o   -c /box86/src/wrapped/wrappedlibnm.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.i: cmake_force
@@ -2175,7 +2260,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o: ../src/wrapped/wrappedtcmallocminimal.c
 CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o: ../src/wrapped/wrappedtcmallocminimal_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o   -c /box86/src/wrapped/wrappedtcmallocminimal.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.i: cmake_force
@@ -2189,7 +2274,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o: ../src/wrapped/wrappedmpg123.c
 CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o: ../src/wrapped/wrappedmpg123_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o   -c /box86/src/wrapped/wrappedmpg123.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.i: cmake_force
@@ -2203,7 +2288,7 @@ CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.s: cmake_force
 CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.o: ../src/wrapped/wrappedgnutls.c
 CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.o: ../src/wrapped/wrappedgnutls_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.o   -c /box86/src/wrapped/wrappedgnutls.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.i: cmake_force
@@ -2214,10 +2299,24 @@ CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedgnutls.c -o CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.s
 
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/wrapped/wrappedlibcups.c
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o: ../src/wrapped/wrappedlibcups_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o   -c /box86/src/wrapped/wrappedlibcups.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedlibcups.c > CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedlibcups.c -o CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.s
+
 CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.o: ../src/wrapped/wrappedd3dadapter9.c
 CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.o: ../src/wrapped/wrappedd3dadapter9_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.o   -c /box86/src/wrapped/wrappedd3dadapter9.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.i: cmake_force
@@ -2228,10 +2327,150 @@ CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedd3dadapter9.c -o CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.s
 
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/wrapped/wrappedvulkan.c
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o: ../src/wrapped/wrappedvulkan_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o   -c /box86/src/wrapped/wrappedvulkan.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedvulkan.c > CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedvulkan.c -o CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.s
+
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/wrapped/wrappedwaylandclient.c
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o: ../src/wrapped/wrappedwaylandclient_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o   -c /box86/src/wrapped/wrappedwaylandclient.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedwaylandclient.c > CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedwaylandclient.c -o CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.s
+
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/wrapped/wrappedxml2.c
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o: ../src/wrapped/wrappedxml2_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o   -c /box86/src/wrapped/wrappedxml2.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedxml2.c > CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedxml2.c -o CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.s
+
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/wrapped/wrappedxslt.c
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o: ../src/wrapped/wrappedxslt_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o   -c /box86/src/wrapped/wrappedxslt.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedxslt.c > CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedxslt.c -o CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.s
+
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/wrapped/wrappedldapr.c
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o: ../src/wrapped/wrappedldapr_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o   -c /box86/src/wrapped/wrappedldapr.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedldapr.c > CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedldapr.c -o CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.s
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/wrapped/wrappedlber.c
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o: ../src/wrapped/wrappedlber_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o   -c /box86/src/wrapped/wrappedlber.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedlber.c > CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedlber.c -o CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.s
+
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/wrapped/wrappednsl.c
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o: ../src/wrapped/wrappednsl_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o   -c /box86/src/wrapped/wrappednsl.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappednsl.c > CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappednsl.c -o CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.s
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/wrapped/wrappedlcms2.c
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o: ../src/wrapped/wrappedlcms2_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o   -c /box86/src/wrapped/wrappedlcms2.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedlcms2.c > CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedlcms2.c -o CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.s
+
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/wrapped/wrappedkrb5.c
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o: ../src/wrapped/wrappedkrb5_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o   -c /box86/src/wrapped/wrappedkrb5.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedkrb5.c > CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedkrb5.c -o CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.s
+
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: CMakeFiles/box86.dir/flags.make
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/wrapped/wrappedgssapikrb5.c
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o: ../src/wrapped/wrappedgssapikrb5_private.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o   -c /box86/src/wrapped/wrappedgssapikrb5.c
+
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /box86/src/wrapped/wrappedgssapikrb5.c > CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.i
+
+CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /box86/src/wrapped/wrappedgssapikrb5.c -o CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.s
+
 CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.o: CMakeFiles/box86.dir/flags.make
 CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.o: ../src/wrapped/wrappedldlinux.c
 CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.o: ../src/wrapped/wrappedldlinux_private.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building C object CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.o   -c /box86/src/wrapped/wrappedldlinux.c
 
 CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.i: cmake_force
@@ -2281,6 +2520,7 @@ box86_OBJECTS = \
 "CMakeFiles/box86.dir/src/libtools/sdl2rwops.c.o" \
 "CMakeFiles/box86.dir/src/libtools/signals.c.o" \
 "CMakeFiles/box86.dir/src/libtools/threads.c.o" \
+"CMakeFiles/box86.dir/src/libtools/vkalign.c.o" \
 "CMakeFiles/box86.dir/src/dynarec/dynarec.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/generated/wrapper.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o" \
@@ -2299,6 +2539,7 @@ box86_OBJECTS = \
 "CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg2.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o" \
@@ -2340,6 +2581,7 @@ box86_OBJECTS = \
 "CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedcurl.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedudev1.c.o" \
@@ -2368,6 +2610,8 @@ box86_OBJECTS = \
 "CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo6.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedgio2.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o" \
@@ -2390,7 +2634,18 @@ box86_OBJECTS = \
 "CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o" \
+"CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o" \
 "CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.o"
 
 # External object files for target box86
@@ -2433,6 +2688,7 @@ box86: CMakeFiles/box86.dir/src/libtools/sdl1rwops.c.o
 box86: CMakeFiles/box86.dir/src/libtools/sdl2rwops.c.o
 box86: CMakeFiles/box86.dir/src/libtools/signals.c.o
 box86: CMakeFiles/box86.dir/src/libtools/threads.c.o
+box86: CMakeFiles/box86.dir/src/libtools/vkalign.c.o
 box86: CMakeFiles/box86.dir/src/dynarec/dynarec.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/generated/wrapper.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedlibc.c.o
@@ -2451,6 +2707,7 @@ box86: CMakeFiles/box86.dir/src/wrapped/wrappedsdl1ttf.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedsdl2.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedsdl2mixer.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedsdl2image.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedsdl2ttf.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedsmpeg2.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedvorbisfile.c.o
@@ -2492,6 +2749,7 @@ box86: CMakeFiles/box86.dir/src/wrapped/wrappedopenal.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedalut.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedlibjpeg62.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedturbojpeg.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedcurl.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedudev0.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedudev1.c.o
@@ -2520,6 +2778,8 @@ box86: CMakeFiles/box86.dir/src/wrapped/wrappedlibncurses6.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedlibtinfo6.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedgtkx112.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedgdkx112.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedgtk3.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedgdk3.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedgdkpixbuf2.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedgio2.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedgmodule2.c.o
@@ -2542,12 +2802,23 @@ box86: CMakeFiles/box86.dir/src/wrapped/wrappedlibnm.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedtcmallocminimal.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedmpg123.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedgnutls.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedlibcups.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedd3dadapter9.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedvulkan.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedwaylandclient.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedxml2.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedxslt.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedldapr.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedlber.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappednsl.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedlcms2.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedkrb5.c.o
+box86: CMakeFiles/box86.dir/src/wrapped/wrappedgssapikrb5.c.o
 box86: CMakeFiles/box86.dir/src/wrapped/wrappedldlinux.c.o
 box86: CMakeFiles/box86.dir/build.make
 box86: libdynarec.a
 box86: CMakeFiles/box86.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Linking C executable box86"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Linking C executable box86"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/box86.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

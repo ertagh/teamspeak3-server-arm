@@ -9,6 +9,7 @@ ENV TS_UPDATE_BACKUP=1
 ENV UID=1000
 ENV GID=1000
 ENV INIFILE=0
+ENV DEBUG=0
 
 #Accept the TS3Server License
 ENV TS3SERVER_LICENSE accept
@@ -16,7 +17,7 @@ ENV TS3SERVER_LICENSE accept
 LABEL Maintainer="ertagh@web.de"
 
 #Add s6
-ADD https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.0/s6-overlay-armhf.tar.gz /tmp/
+ADD https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.2/s6-overlay-armhf.tar.gz /tmp/
 
 #Update repository and install necessary programs
 #Creating folders

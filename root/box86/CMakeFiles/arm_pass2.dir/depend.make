@@ -30,6 +30,7 @@ CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_00.c.o: ../src/emu/x86primop.h
 
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_0f.c.o: ../src/emu/x86emu_private.h
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_0f.c.o: ../src/emu/x86run_private.h
+CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_0f.c.o: ../src/emu/x87emu_private.h
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_0f.c.o: ../src/include/box86context.h
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_0f.c.o: ../src/include/box86stack.h
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_0f.c.o: ../src/include/callback.h
@@ -593,6 +594,7 @@ CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_helper.c.o: ../src/include/x86r
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_helper.c.o: ../src/include/x86trace.h
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_helper.c.o: ../src/dynarec/arm_emitter.h
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_helper.c.o: ../src/dynarec/arm_printer.h
+CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_helper.c.o: ../src/dynarec/dynablock_private.h
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_helper.c.o: ../src/dynarec/dynarec_arm_functions.h
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_helper.c.o: ../src/dynarec/dynarec_arm_helper.c
 CMakeFiles/arm_pass2.dir/src/dynarec/dynarec_arm_helper.c.o: ../src/dynarec/dynarec_arm_helper.h

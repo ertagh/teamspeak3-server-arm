@@ -88,6 +88,10 @@ stdint.h
 stdint.h
 -
 
+/box86/src/dynarec/arm_lock_helper.h
+stdint.h
+-
+
 /box86/src/dynarec/arm_printer.c
 stdint.h
 -
@@ -143,6 +147,8 @@ elfloader.h
 /box86/src/dynarec/elfloader.h
 dynarec_arm.h
 /box86/src/dynarec/dynarec_arm.h
+arm_lock_helper.h
+/box86/src/dynarec/arm_lock_helper.h
 khash.h
 /box86/src/dynarec/khash.h
 
@@ -189,6 +195,8 @@ dynarec_arm.h
 /box86/src/dynarec/dynarec_arm.h
 dynarec_arm_private.h
 /box86/src/dynarec/dynarec_arm_private.h
+dynarec_arm_functions.h
+/box86/src/dynarec/dynarec_arm_functions.h
 elfloader.h
 /box86/src/dynarec/elfloader.h
 

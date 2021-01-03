@@ -53,32 +53,6 @@ CMAKE_BUILD_TYPE:STRING=RelWithDebInfo
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
-
-//A wrapper around 'ar' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-8
-
-//A wrapper around 'ranlib' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-8
-
-//Flags used by the CXX compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=
-
-//Flags used by the CXX compiler during DEBUG builds.
-CMAKE_CXX_FLAGS_DEBUG:STRING=-g
-
-//Flags used by the CXX compiler during MINSIZEREL builds.
-CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
-
-//Flags used by the CXX compiler during RELEASE builds.
-CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
-
-//Flags used by the CXX compiler during RELWITHDEBINFO builds.
-CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
-
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
 
@@ -258,12 +232,21 @@ ODROID:BOOL=OFF
 //Set to ON if targeting an OpenPandora device
 PANDORA:BOOL=OFF
 
+//Set to ON if targeting a POWER9 processor
+POWER9:BOOL=OFF
+
+//Set to ON if targeting a little-endian PowerPC device
+POWERPCLE:BOOL=OFF
+
 //Set to ON if targeting an OpenPandora device
 PYRA:BOOL=OFF
 
-//Where can one of the python3.7, python3, python, ipy32 or ipy
-// libraries be found
+//Where can one of the python3.7, python3, python or ipy libraries
+// be found
 Python3_EXECUTABLE:FILEPATH=/usr/bin/python3.7
+
+//Set to ON if targeting an Rockchip RK3399 based device
+RK3399:BOOL=OFF
 
 //Set to ON if targeting an RaspberryPI2 device
 RPI2:BOOL=OFF
@@ -273,6 +256,9 @@ RPI3:BOOL=OFF
 
 //Set to ON if targeting an RaspberryPI4 device
 RPI4:BOOL=OFF
+
+//Set to ON if host device uses SysVR4 vararg calling convention
+SYSV_VARARG:BOOL=OFF
 
 //Set to ON to use ccache if present in the system
 USE_CCACHE:BOOL=OFF
@@ -323,22 +309,6 @@ CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
-//ADVANCED property for variable: CMAKE_CXX_COMPILER
-CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_COMPILER_AR
-CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_COMPILER_RANLIB
-CMAKE_CXX_COMPILER_RANLIB-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_FLAGS
-CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
-CMAKE_CXX_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_FLAGS_MINSIZEREL
-CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_FLAGS_RELEASE
-CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
-CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR

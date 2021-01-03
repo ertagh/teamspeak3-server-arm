@@ -75,3 +75,9 @@ sleep 10s
 
 #Let us chown everything we need..
 chown_save
+
+#Debug switch
+if [ "$DEBUG" != 0 ]
+then
+        tail -f /dev/null
+fi

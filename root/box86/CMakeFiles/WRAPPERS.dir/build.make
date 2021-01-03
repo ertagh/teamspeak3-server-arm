@@ -72,6 +72,7 @@ CMakeFiles/WRAPPERS: ../src/wrapped/generated/functions_list.txt
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsdl2.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsdl2mixer.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsdl2image.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsdl2ttf.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsmpeg.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsmpeg2.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedvorbisfile.c
@@ -113,6 +114,7 @@ CMakeFiles/WRAPPERS: ../src/wrapped/generated/functions_list.txt
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedalut.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlibjpeg.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlibjpeg62.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedturbojpeg.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedcurl.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedudev0.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedudev1.c
@@ -141,6 +143,8 @@ CMakeFiles/WRAPPERS: ../src/wrapped/generated/functions_list.txt
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlibtinfo6.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgtkx112.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgdkx112.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgtk3.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgdk3.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgdkpixbuf2.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgio2.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgmodule2.c
@@ -163,7 +167,18 @@ CMakeFiles/WRAPPERS: ../src/wrapped/generated/functions_list.txt
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedtcmallocminimal.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedmpg123.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgnutls.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlibcups.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedd3dadapter9.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedvulkan.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedwaylandclient.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedxml2.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedxslt.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedldapr.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlber.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappednsl.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlcms2.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedkrb5.c
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgssapikrb5.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedldlinux.c
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedd3dadapter9_gen.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlibc_private.h
@@ -182,6 +197,7 @@ CMakeFiles/WRAPPERS: ../src/wrapped/generated/functions_list.txt
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsdl2_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsdl2mixer_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsdl2image_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsdl2ttf_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsmpeg_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedsmpeg2_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedvorbisfile_private.h
@@ -223,6 +239,7 @@ CMakeFiles/WRAPPERS: ../src/wrapped/generated/functions_list.txt
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedalut_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlibjpeg_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlibjpeg62_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedturbojpeg_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedcurl_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedudev0_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedudev1_private.h
@@ -251,6 +268,8 @@ CMakeFiles/WRAPPERS: ../src/wrapped/generated/functions_list.txt
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlibtinfo6_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgtkx112_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgdkx112_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgtk3_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgdk3_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgdkpixbuf2_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgio2_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgmodule2_private.h
@@ -273,11 +292,22 @@ CMakeFiles/WRAPPERS: ../src/wrapped/generated/functions_list.txt
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedtcmallocminimal_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedmpg123_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgnutls_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlibcups_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedd3dadapter9_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedvulkan_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedwaylandclient_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedxml2_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedxslt_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedldapr_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlber_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappednsl_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedlcms2_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedkrb5_private.h
+../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedgssapikrb5_private.h
 ../src/wrapped/generated/functions_list.txt: ../src/wrapped/wrappedldlinux_private.h
 ../src/wrapped/generated/functions_list.txt: ../rebuild_wrappers.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/box86/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../src/wrapped/generated/functions_list.txt"
-	/usr/bin/python3.7 /box86/rebuild_wrappers.py /box86 PANDORA HAVE_LD80BITS NOALIGN HAVE_TRACE -- /box86/src/wrapped/wrappedd3dadapter9_gen.h /box86/src/wrapped/wrappedlibc_private.h /box86/src/wrapped/wrappedlibpthread_private.h /box86/src/wrapped/wrappedlibrt_private.h /box86/src/wrapped/wrappedlibgl_private.h /box86/src/wrapped/wrappedlibglu_private.h /box86/src/wrapped/wrappedlibx11_private.h /box86/src/wrapped/wrappedlibasound_private.h /box86/src/wrapped/wrappedlibdl_private.h /box86/src/wrapped/wrappedlibm_private.h /box86/src/wrapped/wrappedsdl1_private.h /box86/src/wrapped/wrappedsdl1mixer_private.h /box86/src/wrapped/wrappedsdl1image_private.h /box86/src/wrapped/wrappedsdl1ttf_private.h /box86/src/wrapped/wrappedsdl2_private.h /box86/src/wrapped/wrappedsdl2mixer_private.h /box86/src/wrapped/wrappedsdl2image_private.h /box86/src/wrapped/wrappedsmpeg_private.h /box86/src/wrapped/wrappedsmpeg2_private.h /box86/src/wrapped/wrappedvorbisfile_private.h /box86/src/wrapped/wrappedlibvorbis_private.h /box86/src/wrapped/wrappedlibogg_private.h /box86/src/wrapped/wrappedpng12_private.h /box86/src/wrapped/wrappedpng16_private.h /box86/src/wrapped/wrappedlibxxf86vm_private.h /box86/src/wrapped/wrappedlibxrandr_private.h /box86/src/wrapped/wrappedlibxext_private.h /box86/src/wrapped/wrappedxinerama_private.h /box86/src/wrapped/wrappedlibxfixes_private.h /box86/src/wrapped/wrappedlibxcursor_private.h /box86/src/wrapped/wrappedlibxrender_private.h /box86/src/wrapped/wrappedlibxi_private.h /box86/src/wrapped/wrappedlibxss_private.h /box86/src/wrapped/wrappedlibxpm_private.h /box86/src/wrapped/wrappedlibxau_private.h /box86/src/wrapped/wrappedlibxdmcp_private.h /box86/src/wrapped/wrappedlibx11xcb_private.h /box86/src/wrapped/wrappedlibxcb_private.h /box86/src/wrapped/wrappedlibxcbxfixes_private.h /box86/src/wrapped/wrappedlibxcbshape_private.h /box86/src/wrapped/wrappedlibxcbshm_private.h /box86/src/wrapped/wrappedlibxcbrandr_private.h /box86/src/wrapped/wrappedlibxcbimage_private.h /box86/src/wrapped/wrappedlibxcbkeysyms_private.h /box86/src/wrapped/wrappedlibxcbxtest_private.h /box86/src/wrapped/wrappedlibxcbdri2_private.h /box86/src/wrapped/wrappedlibxcbdri3_private.h /box86/src/wrapped/wrappedlibxcbpresent_private.h /box86/src/wrapped/wrappedlibxtst_private.h /box86/src/wrapped/wrappedlibxt_private.h /box86/src/wrapped/wrappedlibxcomposite_private.h /box86/src/wrapped/wrappedlibxdamage_private.h /box86/src/wrapped/wrappedlibxmu_private.h /box86/src/wrapped/wrappedlibz_private.h /box86/src/wrapped/wrappedopenal_private.h /box86/src/wrapped/wrappedalut_private.h /box86/src/wrapped/wrappedlibjpeg_private.h /box86/src/wrapped/wrappedlibjpeg62_private.h /box86/src/wrapped/wrappedcurl_private.h /box86/src/wrapped/wrappedudev0_private.h /box86/src/wrapped/wrappedudev1_private.h /box86/src/wrapped/wrappeddbus_private.h /box86/src/wrapped/wrappediconv_private.h /box86/src/wrapped/wrappedlibdrm_private.h /box86/src/wrapped/wrappedcrypto_private.h /box86/src/wrapped/wrappedlibssl_private.h /box86/src/wrapped/wrappedutil_private.h /box86/src/wrapped/wrappedlibuuid_private.h /box86/src/wrapped/wrappedlibresolv_private.h /box86/src/wrapped/wrappedpulsesimple_private.h /box86/src/wrapped/wrappedpulse_private.h /box86/src/wrapped/wrappedlibsndfile_private.h /box86/src/wrapped/wrappedfontconfig_private.h /box86/src/wrapped/wrappedfreetype_private.h /box86/src/wrapped/wrappedbz2_private.h /box86/src/wrapped/wrappedlibsm_private.h /box86/src/wrapped/wrappedlibice_private.h /box86/src/wrapped/wrappedlibusb1_private.h /box86/src/wrapped/wrappedlibncursesw_private.h /box86/src/wrapped/wrappedlibformw_private.h /box86/src/wrapped/wrappedlibncurses_private.h /box86/src/wrapped/wrappedlibtinfo_private.h /box86/src/wrapped/wrappedlibncurses6_private.h /box86/src/wrapped/wrappedlibtinfo6_private.h /box86/src/wrapped/wrappedgtkx112_private.h /box86/src/wrapped/wrappedgdkx112_private.h /box86/src/wrapped/wrappedgdkpixbuf2_private.h /box86/src/wrapped/wrappedgio2_private.h /box86/src/wrapped/wrappedgmodule2_private.h /box86/src/wrapped/wrappedgobject2_private.h /box86/src/wrapped/wrappedglib2_private.h /box86/src/wrapped/wrappedgstreamer010_private.h /box86/src/wrapped/wrappedgstinterfaces010_private.h /box86/src/wrapped/wrappeddbusmenugtk_private.h /box86/src/wrapped/wrappeddbusmenuglib_private.h /box86/src/wrapped/wrappedappindicator_private.h /box86/src/wrapped/wrappedatk_private.h /box86/src/wrapped/wrappedpangoft2_private.h /box86/src/wrapped/wrappedpangocairo_private.h /box86/src/wrapped/wrappedgthread2_private.h /box86/src/wrapped/wrappedcairo_private.h /box86/src/wrapped/wrappedpango_private.h /box86/src/wrapped/wrappeddbusglib1_private.h /box86/src/wrapped/wrappedgudev1_private.h /box86/src/wrapped/wrappedlibnm_private.h /box86/src/wrapped/wrappedtcmallocminimal_private.h /box86/src/wrapped/wrappedmpg123_private.h /box86/src/wrapped/wrappedgnutls_private.h /box86/src/wrapped/wrappedd3dadapter9_private.h /box86/src/wrapped/wrappedldlinux_private.h
+	/usr/bin/python3.7 /box86/rebuild_wrappers.py /box86 PANDORA HAVE_LD80BITS NOALIGN HAVE_TRACE POWERPCLE -- /box86/src/wrapped/wrappedd3dadapter9_gen.h /box86/src/wrapped/wrappedlibc_private.h /box86/src/wrapped/wrappedlibpthread_private.h /box86/src/wrapped/wrappedlibrt_private.h /box86/src/wrapped/wrappedlibgl_private.h /box86/src/wrapped/wrappedlibglu_private.h /box86/src/wrapped/wrappedlibx11_private.h /box86/src/wrapped/wrappedlibasound_private.h /box86/src/wrapped/wrappedlibdl_private.h /box86/src/wrapped/wrappedlibm_private.h /box86/src/wrapped/wrappedsdl1_private.h /box86/src/wrapped/wrappedsdl1mixer_private.h /box86/src/wrapped/wrappedsdl1image_private.h /box86/src/wrapped/wrappedsdl1ttf_private.h /box86/src/wrapped/wrappedsdl2_private.h /box86/src/wrapped/wrappedsdl2mixer_private.h /box86/src/wrapped/wrappedsdl2image_private.h /box86/src/wrapped/wrappedsdl2ttf_private.h /box86/src/wrapped/wrappedsmpeg_private.h /box86/src/wrapped/wrappedsmpeg2_private.h /box86/src/wrapped/wrappedvorbisfile_private.h /box86/src/wrapped/wrappedlibvorbis_private.h /box86/src/wrapped/wrappedlibogg_private.h /box86/src/wrapped/wrappedpng12_private.h /box86/src/wrapped/wrappedpng16_private.h /box86/src/wrapped/wrappedlibxxf86vm_private.h /box86/src/wrapped/wrappedlibxrandr_private.h /box86/src/wrapped/wrappedlibxext_private.h /box86/src/wrapped/wrappedxinerama_private.h /box86/src/wrapped/wrappedlibxfixes_private.h /box86/src/wrapped/wrappedlibxcursor_private.h /box86/src/wrapped/wrappedlibxrender_private.h /box86/src/wrapped/wrappedlibxi_private.h /box86/src/wrapped/wrappedlibxss_private.h /box86/src/wrapped/wrappedlibxpm_private.h /box86/src/wrapped/wrappedlibxau_private.h /box86/src/wrapped/wrappedlibxdmcp_private.h /box86/src/wrapped/wrappedlibx11xcb_private.h /box86/src/wrapped/wrappedlibxcb_private.h /box86/src/wrapped/wrappedlibxcbxfixes_private.h /box86/src/wrapped/wrappedlibxcbshape_private.h /box86/src/wrapped/wrappedlibxcbshm_private.h /box86/src/wrapped/wrappedlibxcbrandr_private.h /box86/src/wrapped/wrappedlibxcbimage_private.h /box86/src/wrapped/wrappedlibxcbkeysyms_private.h /box86/src/wrapped/wrappedlibxcbxtest_private.h /box86/src/wrapped/wrappedlibxcbdri2_private.h /box86/src/wrapped/wrappedlibxcbdri3_private.h /box86/src/wrapped/wrappedlibxcbpresent_private.h /box86/src/wrapped/wrappedlibxtst_private.h /box86/src/wrapped/wrappedlibxt_private.h /box86/src/wrapped/wrappedlibxcomposite_private.h /box86/src/wrapped/wrappedlibxdamage_private.h /box86/src/wrapped/wrappedlibxmu_private.h /box86/src/wrapped/wrappedlibz_private.h /box86/src/wrapped/wrappedopenal_private.h /box86/src/wrapped/wrappedalut_private.h /box86/src/wrapped/wrappedlibjpeg_private.h /box86/src/wrapped/wrappedlibjpeg62_private.h /box86/src/wrapped/wrappedturbojpeg_private.h /box86/src/wrapped/wrappedcurl_private.h /box86/src/wrapped/wrappedudev0_private.h /box86/src/wrapped/wrappedudev1_private.h /box86/src/wrapped/wrappeddbus_private.h /box86/src/wrapped/wrappediconv_private.h /box86/src/wrapped/wrappedlibdrm_private.h /box86/src/wrapped/wrappedcrypto_private.h /box86/src/wrapped/wrappedlibssl_private.h /box86/src/wrapped/wrappedutil_private.h /box86/src/wrapped/wrappedlibuuid_private.h /box86/src/wrapped/wrappedlibresolv_private.h /box86/src/wrapped/wrappedpulsesimple_private.h /box86/src/wrapped/wrappedpulse_private.h /box86/src/wrapped/wrappedlibsndfile_private.h /box86/src/wrapped/wrappedfontconfig_private.h /box86/src/wrapped/wrappedfreetype_private.h /box86/src/wrapped/wrappedbz2_private.h /box86/src/wrapped/wrappedlibsm_private.h /box86/src/wrapped/wrappedlibice_private.h /box86/src/wrapped/wrappedlibusb1_private.h /box86/src/wrapped/wrappedlibncursesw_private.h /box86/src/wrapped/wrappedlibformw_private.h /box86/src/wrapped/wrappedlibncurses_private.h /box86/src/wrapped/wrappedlibtinfo_private.h /box86/src/wrapped/wrappedlibncurses6_private.h /box86/src/wrapped/wrappedlibtinfo6_private.h /box86/src/wrapped/wrappedgtkx112_private.h /box86/src/wrapped/wrappedgdkx112_private.h /box86/src/wrapped/wrappedgtk3_private.h /box86/src/wrapped/wrappedgdk3_private.h /box86/src/wrapped/wrappedgdkpixbuf2_private.h /box86/src/wrapped/wrappedgio2_private.h /box86/src/wrapped/wrappedgmodule2_private.h /box86/src/wrapped/wrappedgobject2_private.h /box86/src/wrapped/wrappedglib2_private.h /box86/src/wrapped/wrappedgstreamer010_private.h /box86/src/wrapped/wrappedgstinterfaces010_private.h /box86/src/wrapped/wrappeddbusmenugtk_private.h /box86/src/wrapped/wrappeddbusmenuglib_private.h /box86/src/wrapped/wrappedappindicator_private.h /box86/src/wrapped/wrappedatk_private.h /box86/src/wrapped/wrappedpangoft2_private.h /box86/src/wrapped/wrappedpangocairo_private.h /box86/src/wrapped/wrappedgthread2_private.h /box86/src/wrapped/wrappedcairo_private.h /box86/src/wrapped/wrappedpango_private.h /box86/src/wrapped/wrappeddbusglib1_private.h /box86/src/wrapped/wrappedgudev1_private.h /box86/src/wrapped/wrappedlibnm_private.h /box86/src/wrapped/wrappedtcmallocminimal_private.h /box86/src/wrapped/wrappedmpg123_private.h /box86/src/wrapped/wrappedgnutls_private.h /box86/src/wrapped/wrappedlibcups_private.h /box86/src/wrapped/wrappedd3dadapter9_private.h /box86/src/wrapped/wrappedvulkan_private.h /box86/src/wrapped/wrappedwaylandclient_private.h /box86/src/wrapped/wrappedxml2_private.h /box86/src/wrapped/wrappedxslt_private.h /box86/src/wrapped/wrappedldapr_private.h /box86/src/wrapped/wrappedlber_private.h /box86/src/wrapped/wrappednsl_private.h /box86/src/wrapped/wrappedlcms2_private.h /box86/src/wrapped/wrappedkrb5_private.h /box86/src/wrapped/wrappedgssapikrb5_private.h /box86/src/wrapped/wrappedldlinux_private.h
 
 WRAPPERS: CMakeFiles/WRAPPERS
 WRAPPERS: ../src/wrapped/generated/functions_list.txt
