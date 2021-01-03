@@ -66,17 +66,17 @@ then
     if ! [ -e "/teamspeak/save/ts3server.ini" ]
     then
         echo "Initializing TeamSpeak 3 Server with ini-file .."
-        exec qemu-i386 -B 32768 ./ts3server createinifile=1
+        exec qemu-i386 -B "$QEMU_OFFSET" ./ts3server createinifile=1
     fi
 fi
 
 if [ "$INIFILE" != 0 ]
 then
     echo "Starting TeamSpeak 3 Server with ini-file .."
-    exec qemu-i386 -B 32768 ./ts3server inifile=save/ts3server.ini
+    exec qemu-i386 -B "$QEMU_OFFSET" ./ts3server inifile=save/ts3server.ini
 else
     echo "Starting TeamSpeak 3 Server .."
-    exec qemu-i386 -B 32768 ./ts3server
+    exec qemu-i386 -B "$QEMU_OFFSET" ./ts3server
 fi' > /teamspeak/ts3server_minimal_runscript.sh
 
 

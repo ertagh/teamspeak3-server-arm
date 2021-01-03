@@ -25,7 +25,7 @@ then
                                                         echo "Initialization completed!"
                                                         echo "Restart of TeamSpeak 3 Server initiated .."
                                                         #kill the process
-                                                        ps -ef | grep "qemu-i386 -B 32768 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
+                                                        ps -ef | grep "qemu-i386 -B $QEMU_OFFSET ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
                                                         sleep 5s
                                                         exit
                                                 fi

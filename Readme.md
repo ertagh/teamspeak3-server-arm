@@ -50,6 +50,7 @@ With :latest-predownloaded you can update the server either by using the integra
 | UID              | 1000    |           | Set a custom UID (user)                                                                                                                                                                       |
 | GID              | 1000    |           | Set a custom GID (group)                                                                                                                                                                      |
 | DEBUG            | 0       | 0,1       | Container will enter debug mode ( -> no server will start, only the helper)                                                                                                                   |
+| QEMU_OFFSET      | 0x8000  | hex,int   | Specify the offset of qemu (Only use if you're facing an error with the default value. Most likely try 0x10000 instead) Not needed for Box86                                                  |
 
 
 ### TS_UPDATE
@@ -88,6 +89,7 @@ If you want to enter debug mode you can either set the env for a permanent debug
 - Therefore updated qemu version
 - Removed ONLY_LOG_FILES & INTERVAL Envs
 - Reworked the whole scripts due to the updates
+- Added QEMU_OFFSET Env
 
 [2021-01-02]:
 - Added debug env
