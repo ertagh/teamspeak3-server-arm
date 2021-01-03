@@ -24,7 +24,7 @@ You should ALWAYS prefer the arm32v7 image, because Box86 has some advantages ov
 Use something like this and replace {path} and timezone to your liking:
 
 ```shell
-docker run -d --name TeamSpeak3_Server -e TS_UPDATE=1 -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:latest
+docker run -d --name TeamSpeak3_Server -e TS_UPDATE=1 -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:arm32v7-latest-box86
 ```
 #### Have patience after you started the container. It will take some time and your CPU load will be pretty high during initialization. 
 
@@ -33,7 +33,7 @@ docker run -d --name TeamSpeak3_Server -e TS_UPDATE=1 -e TIME_ZONE=Europe/Berlin
 Use something like this and replace {path} and timezone to your liking:
 
 ```shell
-docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:latest-predownloaded
+docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:arm32v7-latest-box86-predownloaded
 ```
 #### Have patience after you started the container. It will take some time and your CPU load will be pretty high during initialization. 
 
