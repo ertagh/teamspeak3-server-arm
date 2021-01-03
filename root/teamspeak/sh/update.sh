@@ -129,16 +129,6 @@ clean_cached_folder
 if [ "$version" = "0" ]
 then
     create_folders
-
-    if [ "$ONLY_LOG_FILES" = 1 ]
-    then
-        ln -s /teamspeak/save/logs /teamspeak/logs
-    else
-        mkdir /teamspeak/logs
-    fi
-
-    ln -s /teamspeak/save/files /teamspeak/files
-
     create_files
     create_links
 fi

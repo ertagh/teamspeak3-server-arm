@@ -16,6 +16,26 @@ clean_teamspeak_folder_recovery(){
     then
         rm -r /teamspeak/save/ts3server.sqlitedb
     fi
+
+    if [ -e "/teamspeak/save/ts3server.sqlitedb-shm" ]
+    then
+        rm -r /teamspeak/save/ts3server.sqlitedb-shm
+    fi
+
+    if [ -e "/teamspeak/save/ts3server.sqlitedb-wal" ]
+    then
+        rm -r /teamspeak/save/ts3server.sqlitedb-wal
+    fi
+
+    if [ -e "/teamspeak/save/ts3server.ini" ]
+    then
+        rm -r /teamspeak/save/ts3server.ini
+    fi
+
+    if [ -e "/teamspeak/save/logs" ]
+    then
+        rm -r /teamspeak/save/logs
+    fi
 }
 #Checking for backups
 if ! [ -e "/teamspeak/save/backup/backup.tar.bz2" ]
@@ -50,5 +70,8 @@ mv /teamspeak_cached/* /teamspeak/
 
 #Cleaning and chowning the files again
 clean_cached_folder
+create_folders
+create_links
+create_links
 chown_teamspeak_folder
 echo "Recovery was successful!"

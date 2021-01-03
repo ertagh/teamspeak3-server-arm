@@ -1,11 +1,9 @@
 #Download base image
-FROM arm32v7/debian:stable-slim
+FROM arm32v7/debian:bullseye-slim
 
 #Set default timezone
 ENV TIME_ZONE=America/Los_Angeles
 ENV DIST_UPDATE=0
-ENV ONLY_LOG_FILES=0
-ENV INTERVAL=600
 ENV TS_UPDATE=0
 ENV TS_UPDATE_BACKUP=1
 ENV UID=1000

@@ -61,26 +61,22 @@ create_minimal_runscript(){
 
 cd $(dirname $([ -x "$(command -v realpath)" ] && realpath "$0" || readlink -f "$0"))
 
-if [ -e "/teamspeak/init" ]
+if [ "$INIFILE" != 0 ]
 then
-    if [ "$INIFILE" != 0 ]
+    if ! [ -e "/teamspeak/save/ts3server.ini" ]
     then
-        if ! [ -e "/teamspeak/save/ts3server.ini" ]
-        then
-            exec qemu-i386 ./ts3server createinifile=1
-        else
-            exec qemu-i386 ./ts3server
-        fi
-    else
-        exec qemu-i386 ./ts3server
+        echo "Initializing TeamSpeak 3 Server with ini-file .."
+        exec qemu-i386 -B 32768 ./ts3server createinifile=1
     fi
 fi
 
 if [ "$INIFILE" != 0 ]
 then
-    exec qemu-i386 ./ts3server inifile=save/ts3server.ini > /dev/null 2>&1
+    echo "Starting TeamSpeak 3 Server with ini-file .."
+    exec qemu-i386 -B 32768 ./ts3server inifile=save/ts3server.ini
 else
-    exec qemu-i386 ./ts3server > /dev/null 2>&1
+    echo "Starting TeamSpeak 3 Server .."
+    exec qemu-i386 -B 32768 ./ts3server
 fi' > /teamspeak/ts3server_minimal_runscript.sh
 
 
@@ -135,7 +131,17 @@ create_files(){
 
 #Creates links betwwen save folder and main teamspeak folder
 create_links(){
-    ln -s /teamspeak/save/ts3server.sqlitedb /teamspeak/ts3server.sqlitedb
-    ln -s /teamspeak/save/query_ip_whitelist.txt /teamspeak/query_ip_whitelist.txt
-    ln -s /teamspeak/save/query_ip_blacklist.txt /teamspeak/query_ip_blacklist.txt
+    ln -s /teamspeak/save/ts3server.sqlitedb /teamspeak/ts3server.sqlitedb > /dev/null 2>&1
+    ln -s /teamspeak/save/query_ip_whitelist.txt /teamspeak/query_ip_whitelist.txt > /dev/null 2>&1
+    ln -s /teamspeak/save/query_ip_blacklist.txt /teamspeak/query_ip_blacklist.txt > /dev/null 2>&1
+
+    if ! [ -e "/teamspeak/logs" ]
+    then
+        ln -s /teamspeak/save/logs /teamspeak/logs > /dev/null 2>&1
+    fi
+
+    if ! [ -e "/teamspeak/files" ]
+    then
+        ln -s /teamspeak/save/files /teamspeak/files > /dev/null 2>&1
+    fi
 }
