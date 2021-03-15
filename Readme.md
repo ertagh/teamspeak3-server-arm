@@ -1,8 +1,6 @@
 # TeamSpeak for arm (using QEMU or Box86)
-## BIG UPDATE [2020-01-03]!
-
-Based on arm32v7/debian:bullseye-slim<br/>
-Or arm64v8/debian:bullseye-slim
+Based on arm32v7/debian:buster-slim<br/>
+Or arm64v8/debian:buster-slim
 
 Tested on an RPi3b+ running Raspbian<br/>
 And RPi3b+ running Ubuntu 20.04 (aarch64)
@@ -84,8 +82,12 @@ If you want to enter debug mode you can either set the env for a permanent debug
 </br>
 
 #### Changelog
+[2021-03-15]:
+- Switched back to Debian Buster, due to errors
+- Added buster-backports repository
+
 [2021-01-03]:
-- Updated from Debian Butcher to Bullseye
+- Updated from Debian Buster to Bullseye
 - Therefore updated qemu version
 - Removed ONLY_LOG_FILES & INTERVAL Envs
 - Reworked the whole scripts due to the updates

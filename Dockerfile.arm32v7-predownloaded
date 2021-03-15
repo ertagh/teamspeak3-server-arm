@@ -1,5 +1,5 @@
 #Download base image
-FROM arm32v7/debian:bullseye-slim
+FROM arm32v7/debian:buster-slim
 
 #Set default timezone
 ENV TIME_ZONE=America/Los_Angeles
@@ -18,15 +18,16 @@ ENV TS3SERVER_LICENSE accept
 LABEL Maintainer="ertagh@web.de"
 
 #Add s6
-ADD https://github.com/just-containers/s6-overlay/releases/download/v2.1.0.2/s6-overlay-armhf.tar.gz /tmp/
+ADD https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-armhf.tar.gz /tmp/
 
 #Update repository and install necessary programs
 #Creating folders
 #untar s6
 #Set locale
-RUN apt-get update && \
+RUN echo 'deb http://deb.debian.org/debian buster-backports main' > /etc/apt/sources.list.d/backports.list && \
+    apt-get update && \
     apt-get upgrade -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y qemu qemu-user wget bzip2 procps jq iputils-ping curl libdigest-sha-perl ca-certificates locales && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y qemu qemu-user wget bzip2 procps jq iputils-ping curl libdigest-sha-perl ca-certificates locales && \
     mkdir /lib/i386-linux-gnu && \
     mkdir /teamspeak && \
     mkdir /teamspeak/sh && \
