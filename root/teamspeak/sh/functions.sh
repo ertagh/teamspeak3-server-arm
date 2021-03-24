@@ -144,4 +144,79 @@ create_links(){
     then
         ln -s /teamspeak/save/files /teamspeak/files > /dev/null 2>&1
     fi
+
+    if [ -e "/teamspeak/licensekey.dat" ]
+    then
+        rm -r /teamspeak/licensekey.dat
+    fi
+
+    if [ -e "/teamspeak/save/licensekey.dat" ]
+    then
+        ln -s /teamspeak/save/licensekey.dat /teamspeak/licensekey.dat > /dev/null 2>&1
+    fi
+}
+
+#Checks if every package is installed
+check_installed_packages(){
+    echo "Checking if every package is installed .."
+
+    if [ -z "$(dpkg -l | grep qemu)" ]
+    then
+        echo "Qemu missing! Reinstalling .."
+        DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y qemu
+    fi
+
+    if [ -z "$(dpkg -l | grep qemu-user)" ]
+    then
+        echo "Qemu-user missing! Reinstalling .."
+        DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y qemu-user
+    fi
+
+    if [ -z "$(dpkg -l | grep wget)" ]
+    then
+        echo "Wget missing! Reinstalling .."
+        DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y wget
+    fi
+
+    if [ -z "$(dpkg -l | grep bzip2)" ]
+    then
+        echo "Bzip2 missing! Reinstalling .."
+        DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y bzip2
+    fi
+
+    if [ -z "$(dpkg -l | grep procps)" ]
+    then
+        echo "Procps missing! Reinstalling .."
+        DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y procps
+    fi
+
+    if [ -z "$(dpkg -l | grep jq)" ]
+    then
+        echo "Jq missing! Reinstalling .."
+        DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y jq
+    fi
+
+    if [ -z "$(dpkg -l | grep iputils-ping)" ]
+    then
+        echo "Iputils-ping missing! Reinstalling .."
+        DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y iputils-ping
+    fi
+
+    if [ -z "$(dpkg -l | grep libdigest-sha-perl)" ]
+    then
+        echo "Libdigest-sha-perl missing! Reinstalling .."
+        DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y libdigest-sha-perl
+    fi
+
+    if [ -z "$(dpkg -l | grep ca-certificates)" ]
+    then
+        echo "Ca-certificates missing! Reinstalling .."
+        DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y ca-certificates
+    fi
+
+    if [ -z "$(dpkg -l | grep locales)" ]
+    then
+        echo "Locales missing! Reinstalling .."
+        DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y locales
+    fi
 }

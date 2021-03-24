@@ -6,6 +6,9 @@ chown_save(){
         chown -R ts:ts /teamspeak_cached
 }
 
+#Check if every package is installed
+check_installed_packages
+
 if ! id -u ts >/dev/null 2>&1; then
         groupadd -g $GID ts
         useradd -u $UID -g $GID -d /teamspeak ts
@@ -31,13 +34,6 @@ then
     echo "Updating timezone to $TIME_ZONE"
     ln -fs /usr/share/zoneinfo/$TIME_ZONE /etc/localtime
     dpkg-reconfigure -f noninteractive tzdata
-fi
-
-#Only update the system, if wanted
-if [ "$DIST_UPDATE" != 0 ]
-then
-    apt-get update
-    DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 fi
 
 #Check if image contains predownloaded server

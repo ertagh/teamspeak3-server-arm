@@ -82,6 +82,12 @@ If you want to enter debug mode you can either set the env for a permanent debug
 </br>
 
 #### Changelog
+[2021-03-24]:
+- Added feature to use 'licensekey.dat'
+
+[2021-03-20]:
+- Added check if all necessary packages are installed
+
 [2021-03-15]:
 - Switched back to Debian Buster, due to errors
 - Added buster-backports repository
