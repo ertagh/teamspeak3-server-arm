@@ -8,34 +8,45 @@ And RPi3b+ running Ubuntu 20.04 (aarch64)
 
 ## Which tag should I use?
 
-If you have a fast connection to "teamspeak.com" -> Use the :latest tag</br>
-Otherwise -> Use the :latest-predownloaded tag
+If you have a fast connection to "teamspeak.com" -> Use :arm32v7-latest-box86 <br/>
+Otherwise -> Use :arm32v7-latest-box86-predownloaded
 
-The only difference between them is that the :latest-predownloaded tag comes with a TeamSpeak 3 server already downloaded, while the :latest tag will download the latest version during setup.
+If you have to use arm64v8 OR you want to use QEMU instead of Box86 -> Use :latest / :latest-predownloaded
 
-#### The image based on Box86 crashes during file uploads! Please disable file uploads (e.g. don't expose port 30033)!
+The only difference between images with and without predownloaded tag is that the images with predownloaded tag already have a predownloaded TeamSpeak 3 Server built in, while the other will download one during setup.
 
-## :latest
+#### Overview:<br/>
+:latest -> QEMU (arm32v7 and arm64v8 available)<br/>
+:latest-predownloaded -> QEMU (arm32v7 and arm64v8 available)<br/>
+:arm32v7-latest-box86 -> Box86 (ONLY arm32v7)<br/>
+:arm32v7-latest-box86-predownloaded -> Box86 (ONLY arm32v7)
+<br/>
+<br/>
+
+## :arm32v7-latest-box86
 ### Run example:
 Use something like this and replace {path} and timezone to your liking:
 
 ```shell
-docker run -d --name TeamSpeak3_Server -e TS_UPDATE=1 -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:latest
+docker run -d --name TeamSpeak3_Server -e TS_UPDATE=1 -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:arm32v7-latest-box86
 ```
-#### Have patience after you started the container. It will take some time and your CPU load will be pretty high during initialization. 
+#### Have patience after you started the container.
 
-## :latest-predownloaded
+## :arm32v7-latest-box86-predownloaded
 ### Run example:
 Use something like this and replace {path} and timezone to your liking:
 
 ```shell
-docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:latest-predownloaded
+docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:arm32v7-latest-box86-predownloaded
 ```
-#### Have patience after you started the container. It will take some time and your CPU load will be pretty high during initialization. 
+#### Have patience after you started the container.
+<br/>
 
-#### Note:</br>
-With :latest-predownloaded you can update the server either by using the integrated updater OR you can pull the latest :latest-predownloaded image and redeploy your container.
-
+## Notes:</br>
+- With predownloaded tags you can update the server either by using the integrated updater OR you can pull the latest predownloaded image and redeploy your container.
+- QEMU will take some time to startup. During that time your CPU load will be pretty high.
+<br/>
+<br/>
 
 ## Additional information:
 
@@ -62,26 +73,31 @@ There will be no versioning inside the backup-script. If you want to keep more t
 Every sunday the container will check if the installed version is still up-to-date. If not, there will be a message inside the log.
 
 ### Recovery
-If you made an update, but the new version doesn't work or you just want to go back to the old one, just put an empty file called "recover" inside the "save"-folder and restart the container.</br>
+If you made an update, but the new version doesn't work or you just want to go back to the old one, just put an empty file called "recover" inside the "save"-folder and restart the container.<br/>
 You can run the "recover.sh" inside the container as well, it'll do the same.
 
 ### Debug
 If you want to enter debug mode you can either set the env for a permanent debug mode, or just create a empty file called "debug" inside the "save"-folder and restart the container.
 
 
-</br>
-</br>
-</br>
+<br/>
+<br/>
+<br/>
 
-#### You found a bug within the scripts?</br>
-#### You've got a problem with the container?</br>
+#### You found a bug within the scripts?<br/>
+#### You've got a problem with the container?<br/>
 #### You are missing a feature?
 ### Contact me!
 
-</br>
-</br>
+<br/>
+<br/>
 
 #### Changelog
+[2021-04-06]:
+- Box86 now fully works
+- Added all features from QEMU to Box86
+- Reworked Box86 image
+
 [2021-03-24]:
 - Added feature to use 'licensekey.dat'
 

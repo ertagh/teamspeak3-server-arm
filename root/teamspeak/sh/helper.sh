@@ -3,6 +3,7 @@
 #Let the server run until everything necessary has been generated
 if [ "$INIFILE" != 0 ]
 then
+        #No ini file is present
         if ! [ -e "/teamspeak/save/ts3server.ini" ]
         then
                 current_timestamp=$(date "+%s")

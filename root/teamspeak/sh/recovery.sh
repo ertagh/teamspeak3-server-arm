@@ -37,6 +37,7 @@ clean_teamspeak_folder_recovery(){
         rm -r /teamspeak/save/logs
     fi
 }
+
 #Checking for backups
 if ! [ -e "/teamspeak/save/backup/backup.tar.bz2" ]
 then
@@ -44,12 +45,12 @@ then
     return
 fi
 
-echo "Entering recovery mode..."
+echo "Entering recovery mode .."
 
 #Cleaning chache folder
 clean_cached_folder
 
-echo "Uncompressing backup file!"
+echo "Uncompressing backup file .."
 tar xf /teamspeak/save/backup/backup.tar.bz2 --strip-components=1 -C /teamspeak_cached
 
 #Renames the current version into blocked -> update to this version is blocked after this
@@ -62,7 +63,7 @@ fi
 clean_teamspeak_folder
 clean_teamspeak_folder_recovery
 
-echo "Rollback to old version!"
+echo "Rollback to old version .."
 #Recovering the old version
 mv /teamspeak_cached/save/* /teamspeak/save/
 rm -r /teamspeak_cached/save
