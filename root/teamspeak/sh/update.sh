@@ -73,7 +73,7 @@ fi
 
 echo "Update available! $version -> $new_version"
 
-echo "Downloading new version ($new_version) .."
+echo "Downloading new version $new_version .."
 clean_cached_folder
 
 #Download new version and generate checksum
@@ -112,7 +112,7 @@ echo "Installing new version $new_version .."
 
 #Untar new version
 tar xf /teamspeak_cached/ts.tar.bz2 --strip-components=1 -C /teamspeak_cached
-rm /teamspeak_cached/ts.tar.bz2 /teamspeak_cached/ts3server_minimal_runscript.sh /teamspeak_cached/LICENSE /teamspeak_cached/CHANGELOG
+rm /teamspeak_cached/ts.tar.bz2 /teamspeak_cached/ts3server_minimal_runscript.sh /teamspeak_cached/LICENSE /teamspeak_cached/CHANGELOG /teamspeak_cached/libts3db_mariadb.so
 rm -r /teamspeak_cached/doc /teamspeak_cached/redist /teamspeak_cached/serverquerydocs
 
 clean_teamspeak_folder
@@ -131,10 +131,6 @@ clean_cached_folder
 if [ "$version" = "0" ]
 then
     create_folders
-
-    ln -s /teamspeak/save/logs /teamspeak/logs
-    ln -s /teamspeak/save/files /teamspeak/files
-
     create_files
     create_links
 fi
@@ -143,4 +139,4 @@ create_minimal_runscript
 create_version_file $new_version
 chown_teamspeak_folder
 
-echo "New version ($new_version) installed succesfully!"
+echo "Version $new_version installed succesfully!"

@@ -3,34 +3,43 @@
 #Let the server run until everything necessary has been generated
 if [ "$INIFILE" != 0 ]
 then
-    #No ini file is present
-    if ! [ -e "/teamspeak/save/ts3server.ini" ]
-    then
-        current_timestamp=$(date "+%s")
-        while :
-        do
-                #ini file has been generated
-                if [ -e "/teamspeak/ts3server.ini" ]
-                then
-                        STOP=$(find /teamspeak/save/logs -type f -name "*1.log" -exec stat -c '%z' {} + | head -n1)
-                        if [ -n "$STOP" ]
+        #No ini file is present
+        if ! [ -e "/teamspeak/save/ts3server.ini" ]
+        then
+                current_timestamp=$(date "+%s")
+                while :
+                do
+                        #No ini file is present
+                        if ! [ -e "/teamspeak/save/ts3server.ini" ]
                         then
-                                #Get the creation date of the last log file from the virtual server
-                                timestamp_file=$(date -d "$STOP" "+%s")
-
-                                if [ $timestamp_file -gt $current_timestamp ]
+                                #ini file has been generated
+                                if [ -e "/teamspeak/ts3server.ini" ]
                                 then
-                                        #kill the process
-                                        ps -ef | grep "/box86/box86 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
-                                        sleep 20s
-                                        exit
+                                        STOP=$(find /teamspeak/save/logs -type f -name "*1.log" -exec stat -c '%z' {} + | head -n1)
+                                        if [ -n "$STOP" ]
+                                        then
+                                                #Get the creation date of the last log file from the virtual server
+                                                timestamp_file=$(date -d "$STOP" "+%s")
+
+                                                if [ $timestamp_file -gt $current_timestamp ]
+                                                then
+                                                        echo "Initialization completed!"
+                                                        echo "Restart of TeamSpeak 3 Server initiated .."
+                                                        #kill the process
+                                                        ps -ef | grep "/box86/box86 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
+                                                        sleep 5s
+                                                        exit
+                                                fi
+                                        fi
                                 fi
+                                sleep 1s
+                        else
+                                exit
                         fi
-                fi
-                sleep 1s
-        done
-    fi
+                done
+        fi
 fi
+
 
 #Wait a few seconds
 sleep 30s

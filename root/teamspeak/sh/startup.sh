@@ -7,6 +7,9 @@ chown_save(){
         chown -R ts:ts /box86
 }
 
+#Check if every package is installed
+check_installed_packages
+
 #Add the user and group
 if ! id -u ts >/dev/null 2>&1; then
         groupadd -g $GID ts
@@ -41,15 +44,18 @@ then
         clean_cached_folder
         
         create_folders
-
-        ln -s /teamspeak/save/logs /teamspeak/logs
-        ln -s /teamspeak/save/files /teamspeak/files
-
         create_files
         create_links
 
         create_minimal_runscript
         chown_teamspeak_folder
+fi
+
+#Enter recover mode if file exists
+if [ -e "/teamspeak/save/recover" ]
+then
+        rm -r /teamspeak/save/recover
+        . /teamspeak/sh/recovery.sh
 fi
 
 #Run the updater, if env is set OR file exists OR teamspeak is not installed 
@@ -63,21 +69,16 @@ then
         . /teamspeak/sh/update.sh
 fi
 
-#Enter recover mode if file exists
-if [ -e "/teamspeak/save/recover" ]
-then
-        rm -r /teamspeak/save/recover
-        . /teamspeak/sh/recovery.sh
-fi
-
 #Just for safety, just wait a few seconds
 sleep 10s
 
 #Let us chown everything we need..
 chown_save
+#Just create the links again if not present
+create_links
 
 #Debug switch
-if [ "$DEBUG" != 0 ]
+if [ "$DEBUG" != 0 ] || [ -e "/teamspeak/save/debug" ]
 then
         tail -f /dev/null
 fi

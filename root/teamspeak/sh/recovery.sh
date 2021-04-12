@@ -63,7 +63,7 @@ fi
 clean_teamspeak_folder
 clean_teamspeak_folder_recovery
 
-echo 'Rollback to old version ..'
+echo "Rollback to old version .."
 #Recovering the old version
 mv /teamspeak_cached/save/* /teamspeak/save/
 rm -r /teamspeak_cached/save
@@ -71,5 +71,8 @@ mv /teamspeak_cached/* /teamspeak/
 
 #Cleaning and chowning the files again
 clean_cached_folder
+create_folders
+create_links
+create_links
 chown_teamspeak_folder
 echo "Recovery was successful!"
