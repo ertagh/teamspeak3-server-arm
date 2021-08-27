@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L35Z0BP)
 # TeamSpeak for arm (using QEMU or Box86)
 Based on arm32v7/debian:buster-slim<br/>
 Or arm64v8/debian:buster-slim
@@ -40,6 +41,16 @@ Use something like this and replace {path} and timezone to your liking:
 docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:arm32v7-latest-box86-predownloaded
 ```
 #### Have patience after you started the container.
+<br/>
+<br/>
+
+## Server Admin Privilege Key
+You can find the key in 3 different ways:
+- You can use the docker logs command and may be able to catch the key that way (Way easier if you're using e.g. Portainer)
+- Inside {path} is a 'logs' directory. Use for example 'cat' to show the content of the !first! log that ends with '_1.log'
+- As an alternative to the second way you can connect to the container directly: 'docker exec -it {NameOfContainer} /bin/bash'. Next go to the 'logs' directory and 'cat' the content of the first log that ends with '_1.log'
+
+<br/>
 <br/>
 
 ## Notes:</br>
@@ -93,6 +104,10 @@ If you want to enter debug mode you can either set the env for a permanent debug
 <br/>
 
 #### Changelog
+[2021-08-27]:
+- Updated the containers
+- Updated predownloaded images to TeamSpeak 3.13.6
+
 [2021-04-06]:
 - Box86 now fully works
 - Added all features from QEMU to Box86
