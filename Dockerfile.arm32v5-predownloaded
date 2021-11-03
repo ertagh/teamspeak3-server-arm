@@ -1,5 +1,5 @@
 #Download base image
-FROM arm32v7/debian:buster-slim
+FROM arm32v5/debian:buster-slim
 
 #Set default timezone
 ENV TIME_ZONE=America/Los_Angeles

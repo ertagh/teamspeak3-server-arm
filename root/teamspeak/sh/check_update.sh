@@ -15,7 +15,7 @@ then
 fi
 
 #Getting new information from json file
-new_version=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.linux.x86.version')
+new_version=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.linux.'"$TS_ARCHITECTURE"'.version')
 
 #Same version -> no update
 if [ "$new_version" = "$version" ]
