@@ -1,7 +1,8 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L35Z0BP)
-# TeamSpeak for arm (using QEMU or Box86)
-Based on arm32v7/debian:buster-slim<br/>
-Or arm64v8/debian:buster-slim
+# TeamSpeak for everything
+### Formerly known as TeamSpeak for arm (using QEMU or Box86)
+
+Based on debian:buster-slim<br/>
 
 Tested on an RPi3b+ running Raspbian<br/>
 And RPi3b+ running Ubuntu 20.04 (aarch64)
@@ -17,8 +18,8 @@ If you have to use arm64v8 OR you want to use QEMU instead of Box86 -> Use :late
 The only difference between images with and without predownloaded tag is that the images with predownloaded tag already have a predownloaded TeamSpeak 3 Server built in, while the other will download one during setup.
 
 #### Overview:<br/>
-:latest -> QEMU (arm32v7 and arm64v8 available)<br/>
-:latest-predownloaded -> QEMU (arm32v7 and arm64v8 available)<br/>
+:latest -> QEMU (arm32v5, arm32v7 and arm64v8 available), x86, x64<br/>
+:latest-predownloaded -> QEMU (arm32v5, arm32v7 and arm64v8 available), x86, x64<br/>
 :arm32v7-latest-box86 -> Box86 (ONLY arm32v7)<br/>
 :arm32v7-latest-box86-predownloaded -> Box86 (ONLY arm32v7)
 <br/>
@@ -104,6 +105,11 @@ If you want to enter debug mode you can either set the env for a permanent debug
 <br/>
 
 #### Changelog
+[2021-11-03]:
+- Updated the containers
+- Added arm32v5 image
+- Added x86 and x64 images
+
 [2021-08-27]:
 - Updated the containers
 - Updated predownloaded images to TeamSpeak 3.13.6

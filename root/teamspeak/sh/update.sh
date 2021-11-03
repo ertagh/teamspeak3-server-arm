@@ -47,9 +47,9 @@ then
 fi
 
 #Getting new information from json file
-new_version=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.linux.x86.version')
-new_checksum=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.linux.x86.checksum')
-new_link=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.linux.x86.mirrors."teamspeak.com"')
+new_version=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.linux.'"$TS_ARCHITECTURE"'.version')
+new_checksum=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.linux.'"$TS_ARCHITECTURE"'.checksum')
+new_link=$(curl -s "https://teamspeak.com/versions/server.json" | jq -cr '.linux.'"$TS_ARCHITECTURE"'.mirrors."teamspeak.com"')
 
 
 #Same version -> no update

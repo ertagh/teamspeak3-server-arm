@@ -4,7 +4,6 @@
 chown_save(){
         chown -R ts:ts /teamspeak
         chown -R ts:ts /teamspeak_cached
-        chown -R ts:ts /box86
 }
 
 #Check if every package is installed
@@ -16,13 +15,24 @@ if ! id -u ts >/dev/null 2>&1; then
         useradd -u $UID -g $GID -d /teamspeak ts
 fi
 
+#If there is no ini file -> enter init
+if [ "$INIFILE" != 0 ]
+then
+        if ! [ -e "/teamspeak/save/ts3server.ini" ]
+        then
+                touch /teamspeak/init
+                chown $UID:$GID /teamspeak/init
+                chmod 777 /teamspeak/init
+        fi
+fi
+
 #Get current timezone
 CURRENT_TIME_ZONE="$(cat /etc/timezone)"
 
 #Update timezone if necessary
 if [ $TIME_ZONE != $CURRENT_TIME_ZONE ]
 then
-    echo "Updating timezone to $TIME_ZONE .."
+    echo "Updating timezone to $TIME_ZONE"
     ln -fs /usr/share/zoneinfo/$TIME_ZONE /etc/localtime
     dpkg-reconfigure -f noninteractive tzdata
 fi
@@ -40,7 +50,7 @@ then
         rm -r /teamspeak/predownloaded
 
         #Complete the installation of the server (similar to last part of "update.sh")
-        echo "Finishing the installation of the predownloaded server .."
+        echo "Completing the installation of the predownloaded server .."
         clean_cached_folder
         
         create_folders
@@ -72,7 +82,7 @@ fi
 #Just for safety, just wait a few seconds
 sleep 10s
 
-#Let us chown everything we need..
+#Let's chown everything we need..
 chown_save
 #Just create the links again if not present
 create_links
