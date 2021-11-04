@@ -82,7 +82,9 @@ else
     ./ts3server
 fi' > /teamspeak/ts3server_minimal_runscript.sh
     else
-        echo '#!/bin/sh
+        if [ "$EMULATOR" = "qemu" ]
+        then
+            echo '#!/bin/sh
 
 cd $(dirname $([ -x "$(command -v realpath)" ] && realpath "$0" || readlink -f "$0"))
 
@@ -103,6 +105,24 @@ else
     echo "Starting TeamSpeak 3 Server .."
     exec qemu-i386 -B "$QEMU_OFFSET" ./ts3server
 fi' > /teamspeak/ts3server_minimal_runscript.sh
+        else
+            echo '#!/bin/sh
+
+cd $(dirname $([ -x "$(command -v realpath)" ] && realpath "$0" || readlink -f "$0"))
+
+if [ "$INIFILE" != 0 ]
+then
+    if ! [ -e "/teamspeak/save/ts3server.ini" ]
+    then
+        exec /box86/box86 ./ts3server createinifile=1
+    fi
+
+    exec /box86/box86 ./ts3server inifile=save/ts3server.ini
+else
+    exec /box86/box86 ./ts3server $@
+fi' > /teamspeak/ts3server_minimal_runscript.sh
+        fi
+
     fi
 
     chmod +x /teamspeak/ts3server_minimal_runscript.sh
@@ -185,13 +205,13 @@ create_links(){
 check_installed_packages(){
     echo "Checking if every package is installed .."
 
-    if [ -z "$(dpkg -l | grep qemu)" ] && [ "$SYSTEM_ARCHITECTURE" = "arm" ]
+    if [ -z "$(dpkg -l | grep qemu)" ] && [ "$SYSTEM_ARCHITECTURE" = "arm" ] && [ "$EMULATOR" = "qemu" ]
     then
         echo "Qemu missing! Reinstalling .."
         DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y qemu
     fi
 
-    if [ -z "$(dpkg -l | grep qemu-user)" ] && [ "$SYSTEM_ARCHITECTURE" = "arm" ]
+    if [ -z "$(dpkg -l | grep qemu-user)" ] && [ "$SYSTEM_ARCHITECTURE" = "arm" ] && [ "$EMULATOR" = "qemu" ]
     then
         echo "Qemu-user missing! Reinstalling .."
         DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y qemu-user

@@ -28,7 +28,13 @@ then
                                                         #kill the process
                                                         if [ "$SYSTEM_ARCHITECTURE" = "arm" ]
                                                         then
-                                                                ps -ef | grep "qemu-i386 -B $QEMU_OFFSET ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
+                                                                if [ "$EMULATOR" = "qemu" ]
+                                                                then
+                                                                        ps -ef | grep "qemu-i386 -B $QEMU_OFFSET ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
+                                                                else
+                                                                        ps -ef | grep "/box86/box86 ./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
+                                                                fi
+                                                                
                                                         else
                                                                 ps -ef | grep "./ts3server createinifile=1" | grep -v grep | awk '{print $2}' | xargs kill
                                                         fi
