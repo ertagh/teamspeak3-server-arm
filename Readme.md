@@ -10,36 +10,36 @@ And RPi3b+ running Ubuntu 20.04 (aarch64)
 
 ## Which tag should I use?
 
-If you have a fast connection to "teamspeak.com" -> Use :arm32v7-latest-box86 <br/>
-Otherwise -> Use :arm32v7-latest-box86-predownloaded
+If you have a fast connection to "teamspeak.com" -> Use :latest-box <br/>
+Otherwise -> Use :latest-box-predownloaded
 
-If you have to use arm64v8 OR you want to use QEMU instead of Box86 -> Use :latest / :latest-predownloaded
+If you want to use QEMU instead of Box86/Box64 -> Use :latest / :latest-predownloaded
 
 The only difference between images with and without predownloaded tag is that the images with predownloaded tag already have a predownloaded TeamSpeak 3 Server built in, while the other will download one during setup.
 
 #### Overview:<br/>
 :latest -> QEMU (arm32v5, arm32v7 and arm64v8 available), x86, x64<br/>
 :latest-predownloaded -> QEMU (arm32v5, arm32v7 and arm64v8 available), x86, x64<br/>
-:arm32v7-latest-box86 -> Box86 (ONLY arm32v7)<br/>
-:arm32v7-latest-box86-predownloaded -> Box86 (ONLY arm32v7)
+:latest-box -> Box86/Box64 (arm32v7 and arm64v8)<br/>
+:latest-box-predownloaded -> Box86/Box64 (arm32v7 and arm64v8)
 <br/>
 <br/>
 
-## :arm32v7-latest-box86
+## :latest-box
 ### Run example:
 Use something like this and replace {path} and timezone to your liking:
 
 ```shell
-docker run -d --name TeamSpeak3_Server -e TS_UPDATE=1 -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:arm32v7-latest-box86
+docker run -d --name TeamSpeak3_Server -e TS_UPDATE=1 -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:latest-box
 ```
 #### Have patience after you started the container.
 
-## :arm32v7-latest-box86-predownloaded
+## :latest-box-predownloaded
 ### Run example:
 Use something like this and replace {path} and timezone to your liking:
 
 ```shell
-docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:arm32v7-latest-box86-predownloaded
+docker run -d --name TeamSpeak3_Server -e TIME_ZONE=Europe/Berlin -p 9987:9987/udp -p 10011:10011/tcp -p 30033:30033/tcp -v {path}/:/teamspeak/save/ ertagh/teamspeak3-server:latest-box-predownloaded
 ```
 #### Have patience after you started the container.
 <br/>
@@ -105,6 +105,11 @@ If you want to enter debug mode you can either set the env for a permanent debug
 <br/>
 
 #### Changelog
+[2022-01-08]:
+- Added Box64 image
+- Added Tags :box-latest and :box-latest-predownloaded
+- Switch to Debian Bullseye for Box86/Box64 images
+
 [2021-11-04]:
 - Updated the containers
 - Added arm32v5 image
