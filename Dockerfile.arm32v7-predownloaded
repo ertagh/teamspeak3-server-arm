@@ -26,11 +26,10 @@ ADD https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-
 #Creating folders
 #untar s6
 #Set locale
-RUN echo 'deb http://deb.debian.org/debian buster-backports main' > /etc/apt/sources.list.d/backports.list && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y wget bzip2 procps jq iputils-ping curl libdigest-sha-perl ca-certificates locales && \
-    mkdir /lib/i386-linux-gnu && \
+    mkdir /usr/lib/i386-linux-gnu && \
     mkdir /teamspeak && \
     mkdir /box86 && \
     mkdir /teamspeak/sh && \
@@ -53,10 +52,11 @@ WORKDIR /teamspeak
 #Basic config for the server
 COPY root/ /
 RUN chmod +x /teamspeak/sh/check_update.sh /teamspeak/sh/functions.sh /teamspeak/sh/recovery.sh /teamspeak/sh/update.sh /teamspeak/recover.sh /teamspeak/sh/startup.sh /teamspeak/sh/helper.sh && \
-    chmod 644 /lib/ld-linux.so.2 && \
-    chmod -R 644 /lib/i386-linux-gnu && \
-    chmod 755 /lib/i386-linux-gnu && \
+    chmod -R 644 /usr/lib/i386-linux-gnu && \
+    chmod 755 /usr/lib/i386-linux-gnu && \
     chmod -R 755 /box86 && \
+    rm -R /box64 && \
+    rm -R /usr/lib/x86_64-linux-gnu && \
     apt-get autoremove -y && \
     apt-get clean && \
     ln -fs /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && \

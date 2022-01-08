@@ -106,21 +106,40 @@ else
     exec qemu-i386 -B "$QEMU_OFFSET" ./ts3server
 fi' > /teamspeak/ts3server_minimal_runscript.sh
         else
-            echo '#!/bin/sh
+            if [ "$EMULATOR" = "box86" ]
+            then
+                echo '#!/bin/sh
 
-cd $(dirname $([ -x "$(command -v realpath)" ] && realpath "$0" || readlink -f "$0"))
+    cd $(dirname $([ -x "$(command -v realpath)" ] && realpath "$0" || readlink -f "$0"))
 
-if [ "$INIFILE" != 0 ]
-then
-    if ! [ -e "/teamspeak/save/ts3server.ini" ]
+    if [ "$INIFILE" != 0 ]
     then
-        exec /box86/box86 ./ts3server createinifile=1
-    fi
+        if ! [ -e "/teamspeak/save/ts3server.ini" ]
+        then
+            exec /box86/box86 ./ts3server createinifile=1
+        fi
 
-    exec /box86/box86 ./ts3server inifile=save/ts3server.ini
-else
-    exec /box86/box86 ./ts3server $@
-fi' > /teamspeak/ts3server_minimal_runscript.sh
+        exec /box86/box86 ./ts3server inifile=save/ts3server.ini
+    else
+        exec /box86/box86 ./ts3server $@
+    fi' > /teamspeak/ts3server_minimal_runscript.sh
+            else
+                    echo '#!/bin/sh
+
+    cd $(dirname $([ -x "$(command -v realpath)" ] && realpath "$0" || readlink -f "$0"))
+
+    if [ "$INIFILE" != 0 ]
+    then
+        if ! [ -e "/teamspeak/save/ts3server.ini" ]
+        then
+            exec /box64/box64 ./ts3server createinifile=1
+        fi
+
+        exec /box64/box64 ./ts3server inifile=save/ts3server.ini
+    else
+        exec /box64/box64 ./ts3server $@
+    fi' > /teamspeak/ts3server_minimal_runscript.sh
+            fi
         fi
 
     fi
