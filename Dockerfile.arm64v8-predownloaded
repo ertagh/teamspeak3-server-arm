@@ -1,5 +1,5 @@
 #Download base image
-FROM arm64v8/debian:buster-slim
+FROM arm64v8/debian:bullseye-slim
 
 #Set default timezone
 ENV TIME_ZONE=America/Los_Angeles
@@ -55,7 +55,7 @@ RUN chmod +x /teamspeak/sh/check_update.sh /teamspeak/sh/functions.sh /teamspeak
     chmod -R 644 /usr/lib/x86_64-linux-gnu && \
     chmod 755 /usr/lib/x86_64-linux-gnu && \
     chmod -R 755 /box64 && \
-    rm -R /box64 && \
+    rm -R /box86 && \
     rm -R /usr/lib/i386-linux-gnu && \
     apt-get autoremove -y && \
     apt-get clean && \
