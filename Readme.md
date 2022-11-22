@@ -105,6 +105,10 @@ If you want to enter debug mode you can either set the env for a permanent debug
 <br/>
 
 #### Changelog
+[2022-11-22]:
+- Fixed bug of box64 helper
+- Updated predownloaded images to 3.13.7
+
 [2022-01-08]:
 - Added Box64 image
 - Added Tags :box-latest and :box-latest-predownloaded
