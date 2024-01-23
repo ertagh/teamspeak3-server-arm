@@ -1,5 +1,5 @@
 #Download base image
-FROM arm32v5/debian:buster-slim
+FROM arm32v5/debian:bookworm-slim
 
 #Set default timezone
 ENV TIME_ZONE=America/Los_Angeles
@@ -21,21 +21,22 @@ ENV TS3SERVER_LICENSE accept
 LABEL Maintainer="ertagh@web.de"
 
 #Add s6
-ADD https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-armhf.tar.gz /tmp/
+ADD https://github.com/just-containers/s6-overlay/releases/download/v3.1.6.2/s6-overlay-armhf.tar.xz /tmp/
+ADD https://github.com/just-containers/s6-overlay/releases/download/v3.1.6.2/s6-overlay-noarch.tar.xz /tmp/
 
 #Update repository and install necessary programs
 #Creating folders
 #untar s6
 #Set locale
-RUN echo 'deb http://deb.debian.org/debian buster-backports main' > /etc/apt/sources.list.d/backports.list && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get upgrade -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -t buster-backports -y qemu qemu-user wget bzip2 procps jq iputils-ping curl libdigest-sha-perl ca-certificates locales && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y qemu-user wget bzip2 procps jq iputils-ping curl libdigest-sha-perl ca-certificates locales xz-utils && \
     mkdir /lib/i386-linux-gnu && \
     mkdir /teamspeak && \
     mkdir /teamspeak/sh && \
     mkdir /teamspeak_cached && \
-    tar xzf /tmp/s6-overlay-armhf.tar.gz -C / && \
+    tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz && \
+    tar -C / -Jxpf /tmp/s6-overlay-armhf.tar.xz && \
     sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8
@@ -50,13 +51,16 @@ WORKDIR /teamspeak
 #Set the timezone
 #Certificates
 COPY root/ /
-RUN chmod +x /teamspeak/sh/check_update.sh /teamspeak/sh/functions.sh /teamspeak/sh/recovery.sh /teamspeak/sh/update.sh /teamspeak/recover.sh /teamspeak/sh/startup.sh /teamspeak/sh/helper.sh && \
+RUN mv /tmplib/* /lib/ && \
+    chmod +x /teamspeak/sh/check_update.sh /teamspeak/sh/functions.sh /teamspeak/sh/recovery.sh /teamspeak/sh/update.sh /teamspeak/recover.sh /teamspeak/sh/startup.sh /teamspeak/sh/helper.sh && \
+    chmod +x /etc/services.d/teamspeak/run /etc/services.d/teamspeak/finish /etc/services.d/teamspeak_helper/run && \
     chmod 644 /lib/ld-linux.so.2 && \
     chmod -R 644 /lib/i386-linux-gnu && \
     chmod 755 /lib/i386-linux-gnu && \
     apt-get autoremove -y && \
     apt-get clean && \
     ln -fs /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && \
+    rm -R /tmplib && \
     dpkg-reconfigure -f noninteractive tzdata && \
     wget -O /usr/local/share/ca-certificates/certificates.crt "https://curl.haxx.se/ca/cacert.pem" > /dev/null 2>&1 && \
     update-ca-certificates
