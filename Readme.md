@@ -2,7 +2,7 @@
 # TeamSpeak for everything
 ### Formerly known as TeamSpeak for arm (using QEMU or Box86)
 
-Based on debian:buster-slim<br/>
+Based on debian:bookworm-slim<br/>
 
 Tested on an RPi3b+ running Raspbian<br/>
 And RPi3b+ running Ubuntu 20.04 (aarch64)
@@ -105,6 +105,12 @@ If you want to enter debug mode you can either set the env for a permanent debug
 <br/>
 
 #### Changelog
+[2024-01-23]:
+- Updated base image to debian bookworm
+- Updated s6 to 3.1.6.2
+- Updated Box64 to latest version
+- Reworked tags of images. Now older versions are still available
+
 [2022-11-22]:
 - Fixed bug of box64 helper
 - Updated predownloaded images to 3.13.7

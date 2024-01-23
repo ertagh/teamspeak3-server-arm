@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv sh
+#!/command/with-contenv sh
 sh /teamspeak/sh/startup.sh
 
 if [ -e "/teamspeak/ts3server_minimal_runscript.sh" ]

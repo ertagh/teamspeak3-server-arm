@@ -1,5 +1,5 @@
 #Download base image
-FROM arm64v8/debian:bullseye-slim
+FROM arm64v8/debian:bookworm-slim
 
 #Set default timezone
 ENV TIME_ZONE=America/Los_Angeles
@@ -20,7 +20,8 @@ ENV TS3SERVER_LICENSE accept
 LABEL Maintainer="ertagh@web.de"
 
 #Add s6
-ADD https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-aarch64.tar.gz /tmp/
+ADD https://github.com/just-containers/s6-overlay/releases/download/v3.1.6.2/s6-overlay-aarch64.tar.xz /tmp/
+ADD https://github.com/just-containers/s6-overlay/releases/download/v3.1.6.2/s6-overlay-noarch.tar.xz /tmp/
 
 #Update repository and install necessary programs
 #Creating folders
@@ -28,13 +29,14 @@ ADD https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-
 #Set locale
 RUN apt-get update && \
     apt-get upgrade -y && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y wget bzip2 procps jq iputils-ping curl libdigest-sha-perl ca-certificates locales && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y wget bzip2 procps jq iputils-ping curl libdigest-sha-perl ca-certificates locales xz-utils && \
     mkdir /usr/lib/x86_64-linux-gnu && \
     mkdir /teamspeak && \
     mkdir /box64 && \
     mkdir /teamspeak/sh && \
     mkdir /teamspeak_cached && \
-    tar xzf /tmp/s6-overlay-aarch64.tar.gz -C / && \
+    tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz && \
+    tar -C / -Jxpf /tmp/s6-overlay-aarch64.tar.xz && \
     sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8
@@ -52,6 +54,7 @@ WORKDIR /teamspeak
 #Basic config for the server
 COPY root/ /
 RUN chmod +x /teamspeak/sh/check_update.sh /teamspeak/sh/functions.sh /teamspeak/sh/recovery.sh /teamspeak/sh/update.sh /teamspeak/recover.sh /teamspeak/sh/startup.sh /teamspeak/sh/helper.sh && \
+    chmod +x /etc/services.d/teamspeak/run /etc/services.d/teamspeak/finish /etc/services.d/teamspeak_helper/run && \
     chmod -R 644 /usr/lib/x86_64-linux-gnu && \
     chmod 755 /usr/lib/x86_64-linux-gnu && \
     chmod -R 755 /box64 && \
