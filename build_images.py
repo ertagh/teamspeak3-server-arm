@@ -27,7 +27,7 @@ if build_pre_downloaded:
     subprocess.run(['docker', 'push', f'ertagh/teamspeak3-server:arm64v8-box-predownloaded-{tag_name}'])
 
 # Create new manifests
-subprocess.run(['docker', 'manifest', 'create', 'ertagh/teamspeak3-server:latest-box', f'ertagh/teamspeak3-server:arm32v7-box-{tag_name}', f'ertagh/teamspeak3-server:arm64v8-latest-box-{tag_name}'])
+subprocess.run(['docker', 'manifest', 'create', 'ertagh/teamspeak3-server:latest-box', f'ertagh/teamspeak3-server:arm32v7-box-{tag_name}', f'ertagh/teamspeak3-server:arm64v8-box-{tag_name}'])
 subprocess.run(['docker', 'manifest', 'push', '--purge', 'ertagh/teamspeak3-server:latest-box'])
 
 if build_pre_downloaded:
