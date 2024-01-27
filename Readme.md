@@ -13,6 +13,8 @@ And RPi3b+ running Ubuntu 20.04 (aarch64)
 If you have a fast connection to "teamspeak.com" -> Use :latest-box <br/>
 Otherwise -> Use :latest-box-predownloaded
 
+Raspberry Pi 5 users have to use either :latest-box or :latest-box-predownloaded!
+
 If you want to use QEMU instead of Box86/Box64 -> Use :latest / :latest-predownloaded
 
 The only difference between images with and without predownloaded tag is that the images with predownloaded tag already have a predownloaded TeamSpeak 3 Server built in, while the other will download one during setup.
@@ -105,6 +107,9 @@ If you want to enter debug mode you can either set the env for a permanent debug
 <br/>
 
 #### Changelog
+[2024-01-27]:
+- Downgraded s6 and Box64 to work on Raspberry Pi 5
+
 [2024-01-23]:
 - Updated base image to debian bookworm
 - Updated s6 to 3.1.6.2
