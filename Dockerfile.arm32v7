@@ -20,8 +20,7 @@ ENV TS3SERVER_LICENSE accept
 LABEL Maintainer="ertagh@web.de"
 
 #Add s6
-ADD https://github.com/just-containers/s6-overlay/releases/download/v3.1.6.2/s6-overlay-armhf.tar.xz /tmp/
-ADD https://github.com/just-containers/s6-overlay/releases/download/v3.1.6.2/s6-overlay-noarch.tar.xz /tmp/
+ADD https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-armhf.tar.gz /tmp/
 
 #Update repository and install necessary programs
 #Creating folders
@@ -35,8 +34,7 @@ RUN apt-get update && \
     mkdir /box86 && \
     mkdir /teamspeak/sh && \
     mkdir /teamspeak_cached && \
-    tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz && \
-    tar -C / -Jxpf /tmp/s6-overlay-armhf.tar.xz && \
+    tar -C / -zxpf /tmp/s6-overlay-armhf.tar.gz --skip-old-files && \
     sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8

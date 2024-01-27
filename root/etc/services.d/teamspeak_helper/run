@@ -1,4 +1,4 @@
-#!/command/with-contenv sh
+#!/usr/bin/with-contenv sh
 while ! id -u ts >/dev/null 2>&1; do
         sleep 1s
 done

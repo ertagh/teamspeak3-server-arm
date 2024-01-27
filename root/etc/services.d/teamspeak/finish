@@ -1,4 +1,4 @@
-#!/command/with-contenv sh
+#!/usr/bin/with-contenv sh
 if [ -e "/teamspeak/ts3server.ini" ]
 then
   mv /teamspeak/ts3server.ini /teamspeak/save/ts3server.ini
